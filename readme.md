@@ -20,6 +20,7 @@ we would love to have someone with experience in 2D game making.
 
 ## Screenshots
 more to come! stay tuned!
+
 ![Game Logo (temp)](/Users/amw271/Documents/BitBucket/Tanks.jpg)
 
 ## Technologies
