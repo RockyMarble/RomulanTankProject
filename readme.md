@@ -30,21 +30,15 @@ more to come! stay tuned!
 
 ## Setup
 details to come! stay tuned!
-Describe how to install / setup your local environement / add link to demo version.
 
 ## Code Examples
 more to come! stay tuned!
-Show examples of usage:
-`put-your-code-here`
 
 ## Features
 more to come! stay tuned!
-List of features ready and TODOs for future development
-* TODO create base game
-* TODO add projectiles
-* TODO add movement
 
 To-do list:
+
 * TODO create base game
 * TODO add projectiles
 * TODO add movement
@@ -54,9 +48,10 @@ Project is: _in progress
 
 ## Inspiration
 based on tanks 2 coolmathgames.com
-and a few others to be listed later on 
-Add here credits. Project inspired by..., based on...
+
+and a few others to be listed later on
 
 ## Contact
 more to come! stay tuned!
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+
+*Template created by [@flynerdpl](https://www.flynerd.pl/)*
