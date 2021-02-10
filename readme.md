@@ -1,5 +1,9 @@
-# Project Name
-> Here goes your awesome project description!
+# Tanks: a Romulans Production 
+> team comprised of Alexander Wilems, Nat Arney, Benjamin Marble, Adam Lamphier
+
+>this program is meant to be a singleplayer 2D strategy and turn based tank arcade game. hope to add multiplayer after 1st sprint.
+Our audience is ourselves, and anyone else who may find this game fun. 
+we want to make this game to get a better feel for the design side of programming, and learning 2D game creation seems like something fun to learn for the group. we really have no goal for impact or change, just some fun. 
 
 ## Table of contents
 * [General info](#general-info)
@@ -12,38 +16,46 @@
 * [Contact](#contact)
 
 ## General info
-Add more general information about project. What the purpose of the project is? Motivation?
+we would love to have someone with experience in 2D game making. 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+more to come! stay tuned!
+![Game Logo (temp)](./BitBucket/tanks.jpeg)
 
 ## Technologies
-* Tech 1 - version 1.0
+* Tech 1 - version 1.0 (c++ as base language), ,github, sourcetree, not all tech to be used decided yet. 
 * Tech 2 - version 2.0
 * Tech 3 - version 3.0
 
 ## Setup
+details to come! stay tuned!
 Describe how to install / setup your local environement / add link to demo version.
 
 ## Code Examples
+more to come! stay tuned!
 Show examples of usage:
 `put-your-code-here`
 
 ## Features
+more to come! stay tuned!
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* TODO create base game
+* TODO add projectiles
+* TODO add movement
 
 To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+* TODO create base game
+* TODO add projectiles
+* TODO add movement
 
 ## Status
-Project is: _in progress_, _finished_, _no longer continue_ and why?
+Project is: _in progress
 
 ## Inspiration
+based on tanks 2 coolmathgames.com
+and a few others to be listed later on 
 Add here credits. Project inspired by..., based on...
 
 ## Contact
+more to come! stay tuned!
 Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
