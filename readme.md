@@ -20,7 +20,7 @@ we would love to have someone with experience in 2D game making.
 
 ## Screenshots
 more to come! stay tuned!
-![Game Logo (temp)](./BitBucket/tanks.jpeg)
+![Game Logo (temp)](./tanks.jpeg)
 
 ## Technologies
 * Tech 1 - version 1.0 (c++ as base language), ,github, sourcetree, not all tech to be used decided yet. 
