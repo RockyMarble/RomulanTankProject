@@ -60,5 +60,5 @@ more to come! stay tuned!
 ## Usage Credits
 more to come! stay tuned!
 
-sound effects used from (https://www.zapsplat.com)
+[sound effects](https://www.zapsplat.com)
 
