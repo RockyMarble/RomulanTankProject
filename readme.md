@@ -55,3 +55,8 @@ and a few others to be listed later on
 more to come! stay tuned!
 
 *Template created by [@flynerdpl](https://www.flynerd.pl/)*
+
+
+## Usage Credits
+more to come! stay tuned!
+sound effects used from (https://www.zapsplat.com)
