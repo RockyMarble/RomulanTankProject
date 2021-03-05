@@ -1,5 +1,5 @@
 # Tanks: a Romulans Production 
-> Team comprised of Alexander Wilems, Nat Arney, Benjamin Marble, Adam Lamphier
+> Team comprised of Alexander Wilems, Nat Arney, Benjamin Marble, Adrian Lamphier
 
 > This program is meant to be a singleplayer 2D strategy and turn based tank arcade game. We hope to add a multiplayer mode after the 1st sprint.
 Our audience is ourselves and anyone else who may find this game fun.
