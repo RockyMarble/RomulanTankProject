@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Script/Gun.gd" type="Script" id=1]
+[ext_resource path="res://images/Tanks/TankBarrelGreen.png" type="Texture" id=2]
+
+[node name="Gun" type="Node2D" groups=[
+"Gun",
+]]
+script = ExtResource( 1 )
+
+[node name="GunBarrel" type="Node2D" parent="."]
+position = Vector2( 100.092, 0.588493 )
+rotation = -8.22034e-08
+
+[node name="gun" type="Sprite" parent="."]
+position = Vector2( 17.9337, 8.34113 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )

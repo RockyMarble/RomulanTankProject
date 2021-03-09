@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Ground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/TankRigid.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Script/PlayerController.gd" type="Script" id=4]
+
+[node name="World" type="Node2D"]
+
+[node name="PlayerController" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="PlayerList" type="Node" parent="PlayerController"]
+
+[node name="Player1" parent="PlayerController/PlayerList" instance=ExtResource( 3 )]
+position = Vector2( 821.665, 459.203 )
+
+[node name="Player2" parent="PlayerController/PlayerList" instance=ExtResource( 3 )]
+position = Vector2( 134.799, 464.208 )
+
+[node name="ButtonList" type="Node" parent="PlayerController"]
+
+[node name="RIGHT" type="Button" parent="PlayerController/ButtonList"]
+margin_left = 73.0482
+margin_top = 526.236
+margin_right = 142.048
+margin_bottom = 577.236
+text = "RIGHT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LEFT" type="Button" parent="PlayerController/ButtonList"]
+margin_left = 4.04825
+margin_top = 526.236
+margin_right = 73.0482
+margin_bottom = 577.236
+text = "LEFT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SHOOT" type="Button" parent="PlayerController/ButtonList"]
+margin_left = 919.407
+margin_top = 434.758
+margin_right = 992.407
+margin_bottom = 489.758
+text = "SHOOT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Plus" type="Button" parent="PlayerController/ButtonList"]
+margin_left = 919.407
+margin_top = 514.049
+margin_right = 992.407
+margin_bottom = 574.049
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Minus" type="Button" parent="PlayerController/ButtonList"]
+margin_left = 839.0
+margin_top = 514.0
+margin_right = 919.0
+margin_bottom = 574.0
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ground" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512.917, 514 )
+[connection signal="pressed" from="PlayerController/ButtonList/SHOOT" to="PlayerController" method="_on_SHOOT_pressed"]
