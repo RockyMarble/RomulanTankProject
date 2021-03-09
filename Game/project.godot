@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Game"
 run/main_scene="res://scenes/World.tscn"
-config/icon="res://icon.png"
+config/icon="res://images/icon.png"
 
 [rendering]
 
