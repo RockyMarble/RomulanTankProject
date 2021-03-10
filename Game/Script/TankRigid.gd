@@ -2,8 +2,10 @@ extends RigidBody2D
 
 var left_vector = Vector2(-30, 0)
 var right_vector = Vector2(30, 0)
+var hp = 100
 
 var flipping = false
+var dead = false
 
 
 func _integrate_forces(state):
@@ -30,3 +32,14 @@ func rotate_left():
 
 func rotate_right():
 	$Gun.rotation_degrees += 1
+
+
+
+func _on_Hitbox_area_entered(area):
+	hp -= area.bullet_damage
+	print("HP: " + str(hp)) # debug
+	if hp == 0:
+		dead = true
+		print("Dead") # debug
+		# Animations, score changes go here.
+		visible = false # Currently does not stop or restart the game

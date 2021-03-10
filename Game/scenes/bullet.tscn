@@ -8,6 +8,7 @@ radius = 5.81282
 height = 9.09476
 
 [node name="bullet" type="Area2D"]
+collision_layer = 3
 script = ExtResource( 2 )
 
 [node name="bullet" type="Sprite" parent="."]
