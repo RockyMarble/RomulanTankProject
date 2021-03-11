@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/soundbits_ComputerSFX_short-040Wav.wav-940a4d0f5121f0cbdd2bd8eb7e5c4e85.sample"
+
+[deps]
+
+source_file="res://audio/soundbits_ComputerSFX_short-040Wav.wav"
+dest_files=[ "res://.import/soundbits_ComputerSFX_short-040Wav.wav-940a4d0f5121f0cbdd2bd8eb7e5c4e85.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

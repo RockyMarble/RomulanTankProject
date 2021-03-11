@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/RTPambiMusicTest1Ogg.ogg-c296b3e5c0f0e302a0eaa0d6ea72eedf.oggstr"
+
+[deps]
+
+source_file="res://audio/RTPambiMusicTest1Ogg.ogg"
+dest_files=[ "res://.import/RTPambiMusicTest1Ogg.ogg-c296b3e5c0f0e302a0eaa0d6ea72eedf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/comedy_missle_launchModdedWav.wav-8568b044f54d18e5f394f5e4c1b5603b.sample"
+
+[deps]
+
+source_file="res://audio/comedy_missle_launchModdedWav.wav"
+dest_files=[ "res://.import/comedy_missle_launchModdedWav.wav-8568b044f54d18e5f394f5e4c1b5603b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

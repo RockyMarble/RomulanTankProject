@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/leisure_video_game_retro_8bit_explosion_001Wav.wav-50998a06a8002d0b16fc592095c33454.sample"
+
+[deps]
+
+source_file="res://audio/leisure_video_game_retro_8bit_explosion_001Wav.wav"
+dest_files=[ "res://.import/leisure_video_game_retro_8bit_explosion_001Wav.wav-50998a06a8002d0b16fc592095c33454.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
