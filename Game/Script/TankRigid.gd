@@ -33,9 +33,12 @@ func rotate_left():
 func rotate_right():
 	$Gun.rotation_degrees += 1
 
+func update_hp():
+	$HitPoints/Label.text = "HP: " + str(hp)
+
 func take_damage(amount):
 	hp -= amount
-	print("HP: " + str(hp)) # debug
+	update_hp()
 	if hp == 0:
 		dead = true
 		print("Dead") # debug
