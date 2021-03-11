@@ -11,6 +11,6 @@ func _process(delta):
 
 
 func _on_bullet_body_entered(body):
-	if body.get_name() == "Player1" or body.get_name() == "Player2":
+	if body.is_in_group("Player"):
 		body.take_damage(bullet_damage)
 	queue_free()
