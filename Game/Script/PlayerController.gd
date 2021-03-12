@@ -9,6 +9,7 @@ var current_player = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player = player_list.get_child(current_player)
+	player.update_current_player(true)
 
 func _process(delta):
 	get_button_input()
@@ -21,7 +22,9 @@ func iterate_player():
 		current_player += 1
 		if current_player >= player_list.get_child_count():
 			current_player = 0
+	player.update_current_player(false)
 	player = player_list.get_child(current_player)
+	player.update_current_player(true)
 
 func _on_SHOOT_pressed():
 	print("shoot")

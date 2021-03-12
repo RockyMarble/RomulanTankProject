@@ -3,19 +3,16 @@
 [ext_resource path="res://images/Tanks/TankBodyGreen.png" type="Texture" id=1]
 [ext_resource path="res://Script/TankRigid.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Gun.tscn" type="PackedScene" id=3]
+[ext_resource path="res://images/Projectile/Blue.PNG" type="Texture" id=4]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.6
 absorbent = true
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 24.4237
-height = 93.3754
-
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 26.2779, 10.2531 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.313726, 0.67451, 0.152941, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -48,22 +45,22 @@ position = Vector2( 0, -15.874 )
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -3.30357, 11.9349 )
 rotation = 1.57079
 scale = Vector2( -0.995936, 1.15265 )
-shape = SubResource( 2 )
+polygon = PoolVector2Array( 13.3056, 67.1896, 14.057, -44.2752, 2.77366, -71.2476, -12.2706, -76.1221, -23.1775, -56.9488, -22.8006, 56.4658, -11.8934, 72.3893, -2.11472, 66.5397 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( -19.3494, -18.044 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="HitPoints" type="Panel" parent="."]
 margin_left = -87.0023
 margin_top = 41.3416
 margin_right = 84.9977
 margin_bottom = 61.3416
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -85,3 +82,9 @@ uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CurrentPlayer" type="Sprite" parent="."]
+visible = false
+position = Vector2( -16.3226, -46.6398 )
+scale = Vector2( 1.61294, 1.43701 )
+texture = ExtResource( 4 )

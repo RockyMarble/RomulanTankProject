@@ -36,6 +36,9 @@ func rotate_right():
 func update_hp():
 	$HitPoints/Label.text = "HP: " + str(hp)
 
+func update_current_player(var value):
+	$CurrentPlayer.visible = value
+
 func take_damage(amount):
 	hp -= amount
 	update_hp()
