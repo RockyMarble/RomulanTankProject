@@ -5,6 +5,7 @@ onready var button_list := $ButtonList
 
 var player
 var current_player = 0
+var paused = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,7 +13,8 @@ func _ready():
 	player.update_current_player(true)
 
 func _process(delta):
-	get_button_input()
+	if not paused:
+		get_button_input()
 
 func iterate_player():
 	current_player += 1
@@ -44,3 +46,11 @@ func get_button_input():
 		player.rotate_right()
 	if $ButtonList/Minus.pressed:
 		player.rotate_left()
+		
+	if $ButtonList/Pause.pressed:
+		pause()
+
+func pause():
+	paused = true
+	var menu = load("res://scenes/PauseMenu.tscn").instance()
+	add_child(menu)
