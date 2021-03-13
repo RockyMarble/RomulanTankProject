@@ -54,9 +54,9 @@ __meta__ = {
 
 [node name="Plus" type="Button" parent="ButtonList"]
 margin_left = 919.407
-margin_top = 514.049
+margin_top = 514.0
 margin_right = 992.407
-margin_bottom = 574.049
+margin_bottom = 574.0
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -68,6 +68,19 @@ margin_top = 514.0
 margin_right = 919.0
 margin_bottom = 574.0
 text = "-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" type="Button" parent="ButtonList"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -104.593
+margin_top = 25.0
+margin_right = -31.593
+margin_bottom = 85.0
+grow_horizontal = 0
+text = "||"
 __meta__ = {
 "_edit_use_anchors_": false
 }
