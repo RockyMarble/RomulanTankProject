@@ -42,9 +42,11 @@ func update_current_player(var value):
 func take_damage(amount):
 	hp -= amount
 	update_hp()
+	$SoundPlayerTakeDamage.play()
 	if hp == 0:
 		dead = true
 		print("Dead") # debug
 		# Animations, score changes go here.
 		visible = false # Currently does not stop or restart the game
+		$SoundPlayerDedz.play()
 

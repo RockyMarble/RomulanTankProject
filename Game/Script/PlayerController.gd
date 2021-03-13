@@ -31,6 +31,7 @@ func _on_SHOOT_pressed():
 	for child in player.get_children():
 			if child.is_in_group("Gun"):
 				child.shoot()
+				$SoundPlayerShoot.play()
 	iterate_player()
 
 func get_button_input():
