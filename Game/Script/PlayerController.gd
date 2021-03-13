@@ -53,6 +53,3 @@ func pause():
 	paused = true
 	var menu = load("res://scenes/PauseMenu.tscn").instance()
 	add_child(menu)
-	
-func _on_Resume_pressed():
-	print("resume")
