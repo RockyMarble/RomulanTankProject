@@ -83,7 +83,9 @@ Creating action groups such as shooting and movement for vehicles in-game. Also 
 * creation of animations in reaction to in game actions
 
 ### Nat Arney 
-*TBD*
+* Have levels end when only one tank remains on-screen
+* Swap to a different level when the previous one ends
+* Track "fuel"; disallow movement when fuel is 0
 
 ### Benjamin Marble 
 *TBD*
