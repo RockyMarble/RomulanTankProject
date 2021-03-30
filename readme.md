@@ -22,11 +22,10 @@ Our audience is ourselves and anyone else who may find this game fun.
 This videogame is a 2D sandbox shooter with a sci-fi theme. Multiple players can manipulate a Sci-fi tank and launch projectiles in a turn based competition.
 
 ## Screenshots
-More to come! Stay tuned!
+More to come!
 
 ![MainMenuScreenShot](ReadMePhotos/MainMenuShot.jpg)
 ![inGameShot1](ReadMePhotos/GamePlayShot1.jpg)
-![inGameShot2](ReadMePhotos/GamePlayShot2.jpg)
 
 ## Technologies
 * Tech 1 - version 1.0 (c++ as base language), ,github, sourcetree, godot. 
@@ -45,16 +44,14 @@ More to come! Stay tuned!
 * Local multiplayer capabilities
 * Ability to pause and exit
 
-More to come! Stay tuned!
+More is on its way! Stay tuned!
 
 To-do list:
-
 
 ## Status
 Project is: _in progress
 
 ## Review
-* 
 As of sprint 1 completion
 
 ### Alexander Wilems
@@ -77,7 +74,7 @@ Creating action groups such as shooting and movement for vehicles in-game. also 
 
 * Accomplishment: Implementation of projectile motion physics being applied to collidable bodies. the creation of this allows for a more realistic engament during gameplay, as we will see the projectile simulating the affects of gravity. link to this can be found [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/bullet.gd)
 ![exampleGif](ReadMePhotos/shoot.gif)
-* *please note, not all gameplay mechanics in picture are implemented as of completion of first sprint.*
+*please note, not all gameplay mechanics in picture are implemented as of completion of first sprint.*
 
 ## Inspiration
 Based on Tanks 2 from coolmathgames.com
@@ -93,7 +90,7 @@ Based on Tanks 2 from coolmathgames.com
 
 
 ## Usage Credits
-More to come! Stay tuned!
+We are still working! Stay tuned!
 
 [Game engine](https://godotengine.org)
 
