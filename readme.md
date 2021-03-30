@@ -13,16 +13,20 @@ Our audience is ourselves and anyone else who may find this game fun.
 * [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
+* [Review](#review)
+* [Moving Forward](#moving-forward)
 * [Inspiration](#inspiration)
 * [Contact](#contact)
 
 ## General info
-This videogame is a 2D sandbox shooter with a sci-fi theme. Players can manipulate a space tank and launch various projectiles.
+This videogame is a 2D sandbox shooter with a sci-fi theme. Multiple players can manipulate a Sci-fi tank and launch projectiles in a turn based competition.
 
 ## Screenshots
 More to come! Stay tuned!
 
-![Game Logo (temp)](Tanks.jpg)
+![MainMenuScreenShot](ReadMePhotos/MainMenuShot.jpg)
+![inGameShot1](ReadMePhotos/GamePlayShot1.jpg)
+![inGameShot2](ReadMePhotos/GamePlayShot2.jpg)
 
 ## Technologies
 * Tech 1 - version 1.0 (c++ as base language), ,github, sourcetree, godot. 
@@ -30,28 +34,60 @@ More to come! Stay tuned!
 * Tech 3 - version 3.0
 
 ## Setup
-Details to come! Stay tuned!
+No set up info needed at this time, but more changes are to come! Stay tuned!
 
 ## Code Examples
 More to come! Stay tuned!
 
 ## Features
+* Basic Game movement
+* Firing of projectiles and use of projectile motion
+* Local multiplayer capabilities
+* Ability to pause and exit
+
 More to come! Stay tuned!
 
 To-do list:
 
-* TODO create base game
-* TODO add projectiles
-* TODO add movement
 
 ## Status
 Project is: _in progress
+
+## Review
+* 
+As of sprint 1 completion
+
+### Alexander Wilems
+Creating art and main menu for game. Backgrounds have been created, but not implemented yet. 
+
+* Accomplishment: Creation of fully functioning Title Screen. creates a starting page for game, ability to exit if programm was opened accidentally, and allows start of game. link to git repository for Main Menu [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/scenes/TitleScreen.tscn).
+
+### Nat Arney 
+Curation and implementation of music, sound effects, and other audio files. all basic sound effects for firing gun have been implemented into game as of sprint 1.
+
+* Accomplishments - Implementation of the Main gun sound effects. when projectile is fired, the sound effect for the gun firing is meant to go off in order to give the player a sense of power when firing the gun. aids in immersion and enjoyment of the game. repository link to main gun firing sound effect [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/PlayerController.gd) *(please note this file has been worked on by multiple members for implementation of items only in the scope of support for that member)*
+
+### Benjamin Marble 
+creation of basic terrian hitboxes, health functions of tanks, and damage functions for the game, and in game pause menu. most functions created are currently implemented in game. 
+
+* Accomplishment: Creation of health and damage mechanics for the tanks and projectiles. creation of these allows for there to be an accomplishable goal in the game of dispatching your oppenent with the use of projectiles, and allows the game to have somewhat of an ending. repository link to code can be found [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/TankRigid.gd) *(please note, while health can run out in game, and player is dusted once dead, there is not yet an end of game mechanic for when only 1 player is left standing, to be added in next sprint.)*
+
+### Adrian Lamphier
+Creating action groups such as shooting and movement for vehicles in-game. also worked on slope movements, a mechanic currently not being implemented in demo of product. 
+
+* Accomplishment: Implementation of projectile motion physics being applied to collidable bodies. the creation of this allows for a more realistic engament during gameplay, as we will see the projectile simulating the affects of gravity. link to this can be found [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/bullet.gd)
+![exampleGif](ReadMePhotos/shoot.gif)
+* *please note, not all gameplay mechanics in picture are implemented as of completion of first sprint.*
 
 ## Inspiration
 Based on Tanks 2 from coolmathgames.com
 
 ## Contact
-More to come! Stay tuned!
+* Email: RomulansTP2021@gmail.com
+
+* Twitter: @RomulansP
+
+* Reddit: u/RomulansTP
 
 *Template created by [@flynerdpl](https://www.flynerd.pl/)*
 
