@@ -89,7 +89,9 @@ Creating action groups such as shooting and movement for vehicles in-game. Also 
 *TBD*
 
 ### Adrian Lamphier
-*TBD*
+* Design the shooting function to swap to different weapon types
+* Possibly adjust scale of tanks/map to allow more interesting weapons/map design
+* Create more weapon types
 
 ## Inspiration
 Based on Tanks 2 from coolmathgames.com
