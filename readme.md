@@ -24,9 +24,9 @@ This videogame is a 2D sandbox shooter with a sci-fi theme. Multiple players can
 ## Screenshots
 More to come! Stay tuned!
 
-![MainMenuScreenShot](ReadMePhotos/MainMenuShot)
-![inGameShot1](ReadMePhotos/GamePlayShot1)
-![inGameShot2](ReadMePhotos/GamePlayShot2)
+![MainMenuScreenShot](ReadMePhotos/MainMenuShot.jpg)
+![inGameShot1](ReadMePhotos/GamePlayShot1.jpg)
+![inGameShot2](ReadMePhotos/GamePlayShot2.jpg)
 
 ## Technologies
 * Tech 1 - version 1.0 (c++ as base language), ,github, sourcetree, godot. 
