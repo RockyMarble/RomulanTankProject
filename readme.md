@@ -33,7 +33,7 @@ More to come!
 * Tech 3 - version 3.0
 
 ## Setup
-* Download executable for Mac or Windows [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Run/)
+* Download executable for Mac or Windows [here](https://drive.google.com/drive/folders/1LyZBEC2Yr0cSZWqs52-E5R4sDup3EQeV?usp=sharing)
 * If on mac, open Zip file, then run the executable. *(If given an error that the game cannot be run, cancel the notification, then go to system preferences > Security and Privacy. you will be prompted with a statement that it cannot be run because it isnt from an identified devloper. Click Open Anyway), then enjoy!
 * If windows, double click the .pck file, then enjoy!
 
