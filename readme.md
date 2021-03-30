@@ -52,29 +52,29 @@ To-do list:
 Project is: _in progress
 
 ## Review
-As of sprint 1 completion
+As of Sprint 1 completion
 
 ### Alexander Wilems
 Creating art and main menu for game. Backgrounds have been created, but not implemented yet. 
 
-* Accomplishment: Creation of fully functioning Title Screen. creates a starting page for game, ability to exit if programm was opened accidentally, and allows start of game. link to git repository for Main Menu [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/scenes/TitleScreen.tscn).
+* Accomplishment: Creation of fully functioning Title Screen. creates a starting page for game, ability to exit if programm was opened accidentally, and allows start of game. Link to git repository for Main Menu [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/scenes/TitleScreen.tscn).
 
 ### Nat Arney 
-Curation and implementation of music, sound effects, and other audio files. all basic sound effects for firing gun have been implemented into game as of sprint 1.
+Creation of basic terrain hitboxes, health functions of tanks, and damage functions for the game, and in game pause menu. Most functions created are currently implemented in game. 
 
-* Accomplishments - Implementation of the Main gun sound effects. when projectile is fired, the sound effect for the gun firing is meant to go off in order to give the player a sense of power when firing the gun. aids in immersion and enjoyment of the game. repository link to main gun firing sound effect [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/PlayerController.gd) *(please note this file has been worked on by multiple members for implementation of items only in the scope of support for that member)*
+* Accomplishment: Creation of health and damage mechanics for the tanks and projectiles. Creation of these allows for there to be an accomplishable goal in the game of dispatching your oppenent with the use of projectiles, and allows the game to have somewhat of an ending. Repository link to code can be found [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/TankRigid.gd). *(Please note, while health can run out in game, and player is dusted once dead, there is not yet an end of game mechanic for when only 1 player is left standing, to be added in next sprint.)*
 
 ### Benjamin Marble 
-creation of basic terrian hitboxes, health functions of tanks, and damage functions for the game, and in game pause menu. most functions created are currently implemented in game. 
+Curation and implementation of music, sound effects, and other audio files. All basic sound effects for firing gun have been implemented into game as of Sprint 1.
 
-* Accomplishment: Creation of health and damage mechanics for the tanks and projectiles. creation of these allows for there to be an accomplishable goal in the game of dispatching your oppenent with the use of projectiles, and allows the game to have somewhat of an ending. repository link to code can be found [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/TankRigid.gd) *(please note, while health can run out in game, and player is dusted once dead, there is not yet an end of game mechanic for when only 1 player is left standing, to be added in next sprint.)*
+* Accomplishments - Implementation of the Main gun sound effects. When projectile is fired, the sound effect for the gun firing is meant to go off in order to give the player a sense of power when firing the gun. Aids in immersion and enjoyment of the game. Repository link to main gun firing sound effect [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/PlayerController.gd). *(Please note this file has been worked on by multiple members for implementation of items only in the scope of support for that member.)*
 
 ### Adrian Lamphier
-Creating action groups such as shooting and movement for vehicles in-game. also worked on slope movements, a mechanic currently not being implemented in demo of product. 
+Creating action groups such as shooting and movement for vehicles in-game. Also worked on slope movements, a mechanic currently not being implemented in demo of product. 
 
-* Accomplishment: Implementation of projectile motion physics being applied to collidable bodies. the creation of this allows for a more realistic engament during gameplay, as we will see the projectile simulating the affects of gravity. link to this can be found [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/bullet.gd)
-![exampleGif](ReadMePhotos/shoot.gif)
-*please note, not all gameplay mechanics in picture are implemented as of completion of first sprint.*
+* Accomplishment: Implementation of projectile motion physics being applied to collidable bodies. The creation of this allows for a more realistic engament during gameplay, as we will see the projectile simulating the affects of gravity. Link to this can be found [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/bullet.gd)
+![exampleGif](ReadMePhotos/shoot.gif).
+*(Please note, not all gameplay mechanics in picture are implemented as of completion of first sprint.)*
 
 ## Moving Forward
 ### Alexander Wilems
