@@ -83,9 +83,9 @@ Creating action groups such as shooting and movement for vehicles in-game. Also 
 
 ## Moving Forward
 ### Alexander Wilems
-* creation of supplementary art for other team members such as backgrounds, projectiles, tanks, and other needed Assets.
-* update of current backgrounds and other assets for optimization and other such purposes.
-* creation of animations in reaction to in game actions
+* Creation of supplementary art for other team members such as backgrounds, projectiles, tanks, and other needed Assets.
+* Update of current backgrounds and other assets for optimization and other such purposes.
+* Creation of animations in reaction to in game actions
 
 ### Nat Arney 
 * Have levels end when only one tank remains on-screen
@@ -93,7 +93,9 @@ Creating action groups such as shooting and movement for vehicles in-game. Also 
 * Track "fuel"; disallow movement when fuel is 0
 
 ### Benjamin Marble 
-*TBD*
+* Creation and curation of general SFX
+* Creation of unique background music for a level
+* Creation of weapons SFX
 
 ### Adrian Lamphier
 * Design the shooting function to swap to different weapon types
