@@ -33,7 +33,9 @@ More to come!
 * Tech 3 - version 3.0
 
 ## Setup
-No set up info needed at this time, but more changes are to come! Stay tuned!
+* Download executable for Mac or Windows [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Run/)
+* If on mac, open Zip file, then run the executable. *(If given an error that the game cannot be run, cancel the notification, then go to system preferences > Security and Privacy. you will be prompted with a statement that it cannot be run because it isnt from an identified devloper. Click Open Anyway), then enjoy!
+* If windows, double click the .pck file, then enjoy!
 
 ## Code Examples
 More to come! Stay tuned!
@@ -47,6 +49,9 @@ More to come! Stay tuned!
 More is on its way! Stay tuned!
 
 To-do list:
+* Create an end game mechanic
+* Increase map size
+* Add new items
 
 ## Status
 Project is: _in progress
@@ -78,8 +83,8 @@ Creating action groups such as shooting and movement for vehicles in-game. Also 
 
 ## Moving Forward
 ### Alexander Wilems
-* creation of supplementary art for other team members such as backgrounds, projectiles, tanks, and other needed artifacts.
-* update of current backgrounds and other artifacts for optimization and such
+* creation of supplementary art for other team members such as backgrounds, projectiles, tanks, and other needed Assets.
+* update of current backgrounds and other assets for optimization and other such purposes.
 * creation of animations in reaction to in game actions
 
 ### Nat Arney 
