@@ -76,6 +76,21 @@ Creating action groups such as shooting and movement for vehicles in-game. also 
 ![exampleGif](ReadMePhotos/shoot.gif)
 *please note, not all gameplay mechanics in picture are implemented as of completion of first sprint.*
 
+## Moving Forward
+### Alexander Wilems
+* creation of supplementary art for other team members such as backgrounds, projectiles, tanks, and other needed artifacts.
+* update of current backgrounds and other artifacts for optimization and such
+* creation of animations in reaction to in game actions
+
+### Nat Arney 
+*TBD*
+
+### Benjamin Marble 
+*TBD*
+
+### Adrian Lamphier
+*TBD*
+
 ## Inspiration
 Based on Tanks 2 from coolmathgames.com
 
