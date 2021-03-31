@@ -70,9 +70,9 @@ Creation of basic terrain hitboxes, health functions of tanks, and damage functi
 * Accomplishment: Creation of health and damage mechanics for the tanks and projectiles. Creation of these allows for there to be an accomplishable goal in the game of dispatching your oppenent with the use of projectiles, and allows the game to have somewhat of an ending. Repository link to code can be found [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/TankRigid.gd). *(Please note, while health can run out in game, and player is dusted once dead, there is not yet an end of game mechanic for when only 1 player is left standing, to be added in next sprint.)*
 
 ### Benjamin Marble 
-Curation and implementation of music, sound effects, and other audio files. All basic sound effects for firing gun have been implemented into game as of Sprint 1.
+Curation and implementation of music and sound effects. Menu and level music, as well as basic sound effects for explosions have been implemented into the game, as of Sprint 1.
 
-* Accomplishments - Implementation of the Main gun sound effects. When projectile is fired, the sound effect for the gun firing is meant to go off in order to give the player a sense of power when firing the gun. Aids in immersion and enjoyment of the game. Repository link to main gun firing sound effect [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/PlayerController.gd). *(Please note this file has been worked on by multiple members for implementation of items only in the scope of support for that member.)*
+* Accomplishment: Implementation of the sound effects for the tank weapon and for when a player takes damage. When a projectile is fired, the sound effect for the tank turret immediatly plays. The explosive sound is supposed to give the player a sense of power when firing the tank turret, boosting immersion and enjoyment of the game. Repository link to main gun firing sound effect [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/PlayerController.gd). *(Please note this file has been worked on by multiple members for implementation of items only in the scope of support for that member.)*
 
 ### Adrian Lamphier
 Creating action groups such as shooting and movement for vehicles in-game. Also worked on slope movements, a mechanic currently not being implemented in demo of product. 
@@ -93,9 +93,10 @@ Creating action groups such as shooting and movement for vehicles in-game. Also 
 * Track "fuel"; disallow movement when fuel is 0
 
 ### Benjamin Marble 
-* Creation and curation of general SFX
-* Creation of unique background music for a level
-* Creation of weapons SFX
+* Creation and curation of general SFX for new items
+* Creation of unique background music for each new level
+* Creation of weapons SFX for new weapons
+* Creation of a "killfloor", an offscreen floor sets player health to zero for when they fall off the map
 
 ### Adrian Lamphier
 * Design the shooting function to swap to different weapon types
