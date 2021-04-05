@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/PlayerController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://images/Backgrounds/DesertNight.png" type="Texture" id=3]
+[ext_resource path="res://scenes/TankRigid.tscn" type="PackedScene" id=4]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.6
+absorbent = true
 
 [node name="Level-DesertNight" type="Node2D"]
 
@@ -12,16 +17,22 @@ scale = Vector2( 1.1, 1 )
 
 [node name="PlayerController" parent="." instance=ExtResource( 2 )]
 
-[node name="Player1" parent="PlayerController/PlayerList" index="0"]
-position = Vector2( 829.855, 450.894 )
-
-[node name="Player2" parent="PlayerController/PlayerList" index="1"]
-position = Vector2( 202.435, 450.921 )
-
 [node name="DesertNight" type="Sprite" parent="."]
 position = Vector2( 510.674, 232.727 )
 scale = Vector2( 0.434999, 0.434999 )
 texture = ExtResource( 3 )
+
+[node name="PlayerList" type="Node" parent="." groups=[
+"PlayerList",
+]]
+
+[node name="Player1" parent="PlayerList" instance=ExtResource( 4 )]
+position = Vector2( 820.606, 439.073 )
+physics_material_override = SubResource( 1 )
+
+[node name="Player2" parent="PlayerList" instance=ExtResource( 4 )]
+position = Vector2( 140.096, 443.019 )
+physics_material_override = SubResource( 1 )
 
 [editable path="StaticBody2D"]
 

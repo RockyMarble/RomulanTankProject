@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/PlayerController.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/TempImage/Grassy-Curve-Concave.png" type="Texture" id=2]
+[ext_resource path="res://scenes/TankRigid.tscn" type="PackedScene" id=3]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.6
+absorbent = true
 
 [node name="LevelOne" type="Node2D"]
 
@@ -21,10 +26,16 @@ polygon = PoolVector2Array( -1.71242, 0.63858, 131.479, 48.8014, 274.778, 91.018
 
 [node name="PlayerController" parent="." instance=ExtResource( 1 )]
 
-[node name="Player1" parent="PlayerController/PlayerList" index="0"]
-position = Vector2( 576.087, 399.842 )
+[node name="PlayerList" type="Node" parent="." groups=[
+"PlayerList",
+]]
 
-[node name="Player2" parent="PlayerController/PlayerList" index="1"]
-position = Vector2( 168.699, 311.992 )
+[node name="Player1" parent="PlayerList" instance=ExtResource( 3 )]
+position = Vector2( 912.779, 332.067 )
+physics_material_override = SubResource( 1 )
+
+[node name="Player2" parent="PlayerList" instance=ExtResource( 3 )]
+position = Vector2( 133.74, 298.932 )
+physics_material_override = SubResource( 1 )
 
 [editable path="PlayerController"]
