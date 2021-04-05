@@ -17,4 +17,4 @@ func get_button_input():
 	if $Restart.pressed:
 		get_tree().change_scene(scene_reset)
 	if $Quit.pressed:
-		get_tree().quit()
+		get_tree().change_scene("res://scenes/TitleScreen.tscn")
