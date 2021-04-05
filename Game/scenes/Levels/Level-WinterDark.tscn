@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/PlayerController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://images/Backgrounds/WinterDark.png" type="Texture" id=3]
+[ext_resource path="res://scenes/PlayerListTwo.tscn" type="PackedScene" id=4]
 
 [node name="Level-WinderDark" type="Node2D"]
 
@@ -10,13 +11,9 @@
 position = Vector2( 530.411, 519.795 )
 scale = Vector2( 1.1, 1 )
 
+[node name="PlayerList" parent="." instance=ExtResource( 4 )]
+
 [node name="PlayerController" parent="." instance=ExtResource( 2 )]
-
-[node name="Player1" parent="PlayerController/PlayerList" index="0"]
-position = Vector2( 829.855, 450.894 )
-
-[node name="Player2" parent="PlayerController/PlayerList" index="1"]
-position = Vector2( 202.435, 450.921 )
 
 [node name="WinterDark" type="Sprite" parent="."]
 position = Vector2( 488.04, 302.742 )
