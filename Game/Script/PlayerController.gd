@@ -77,6 +77,9 @@ func _on_Player_death():
 	if amt_dead >= len(get_tree().get_nodes_in_group("Player")) - 1:
 		end_game()
 		
-
+# Nothing exciting yet, but the game does end!
+# TODO: Scene change, on-screen winner display
 func end_game():
+	print("Player " + str(current_player + 1) + " Won!")
+	yield(get_tree().create_timer(1),"timeout")
 	get_tree().change_scene("res://scenes/TitleScreen.tscn")
