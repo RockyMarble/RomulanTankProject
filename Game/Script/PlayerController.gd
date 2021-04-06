@@ -6,35 +6,36 @@ onready var weapon_list := $OptionButton
 
 var player
 var current_player = 0
+var amt_dead = 0
 var paused = false
 
 #Searches the World for PlayerList and sets it to a variable
-#Also adds the first child as the current player (WATCH OUT FOR BUGS WITH THIS)
+#Adds the first child as the current player (WATCH OUT FOR BUGS WITH THIS)
+#Connects to "death" signal from each TankRigid object
 func _ready():
 	for child in get_parent().get_children():
 		if child.is_in_group("PlayerList"):
 			player_list = child
+	for tank in get_tree().get_nodes_in_group("Player"):
+		tank.connect("death", self, "_on_Player_death")
+		
 	player = player_list.get_child(current_player)
 	player.update_current_player(true)
 
 func _process(delta):
 	if not paused:
 		get_button_input()
+	if player.dead:
+		iterate_player()
 
 #Iterates the list of players to find the next player object
-#Bullets and explosions are part of the list as children
-#so we check if the object selected is actually a player
-#if not a player, then continue iterating thru the list
 #sets the icon ,indicating which player turn it is, to on or off
 #Then sets the current weapon of that player to the optionlist
 func iterate_player():
 	current_player += 1
-	if current_player >= player_list.get_child_count():
+	if current_player >= len(get_tree().get_nodes_in_group("Player")):
 		current_player = 0
-	while !player_list.get_child(current_player).is_in_group("Player"):
-		current_player += 1
-		if current_player >= player_list.get_child_count():
-			current_player = 0
+	
 	player.update_current_player(false)
 	player = player_list.get_child(current_player)
 	player.update_current_player(true)
@@ -70,3 +71,12 @@ func pause():
 #sets player weapon to the optionselect
 func _on_OptionButton_item_selected(index):
 	player.set_current_weapon(index)
+
+func _on_Player_death():
+	amt_dead += 1
+	if amt_dead >= len(get_tree().get_nodes_in_group("Player")) - 1:
+		end_game()
+		
+
+func end_game():
+	get_tree().change_scene("res://scenes/TitleScreen.tscn")

@@ -9,6 +9,8 @@ var current_weapon = 0
 var flipping = false
 var dead = false
 
+signal death
+
 onready var gun := $Gun
 
 func _integrate_forces(state):
@@ -61,10 +63,14 @@ func take_damage(amount):
 	hp -= amount
 	update_hp()
 	$SoundPlayerTakeDamage.play()
-	if hp <= 0:
-		dead = true
-		print("Dead") # debug
-		# Animations, score changes go here.
-		visible = false # Currently does not stop or restart the game
+	if hp <= 0 and !dead:
+		die()
 		$SoundPlayerDedz.play()
 
+func die():
+	dead = true
+	print("Dead") # debug
+	# Animations, score changes go here.
+	visible = false # Currently does not stop or restart the game
+	collision_mask = 0b0 # Stops bullets from hitting
+	emit_signal("death") # Sent to PlayerController object to tally death count
