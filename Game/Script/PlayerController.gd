@@ -52,8 +52,15 @@ func _on_SHOOT_pressed():
 func get_button_input():
 	if $ButtonList/RIGHT.pressed:
 		player.move_right()
-	elif $ButtonList/LEFT.pressed:
+		$SoundTankMovement.play()
+	if not $ButtonList/RIGHT.pressed:
+		$SoundTankMovement.stop()
+	
+	if $ButtonList/LEFT.pressed:
 		player.move_left()
+		$SoundTankMovement.play()
+	if not $ButtonList/LEFT.pressed:
+		$SoundTankMovement.stop()
 	
 	if $ButtonList/Plus.pressed:
 		player.rotate_right()
