@@ -11,11 +11,13 @@ absorbent = true
 [node name="LevelOne" type="Node2D"]
 
 [node name="Grassy-Curve" type="Sprite" parent="."]
-position = Vector2( 511.742, 300.539 )
+position = Vector2( 1030.16, 603.197 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 0.827652, 316.014 )
+position = Vector2( 9.81746, 639.648 )
+scale = Vector2( 2, 2 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -24,18 +26,23 @@ __meta__ = {
 position = Vector2( 0, 2 )
 polygon = PoolVector2Array( -1.71242, 0.63858, 131.479, 48.8014, 274.778, 91.0183, 412.132, 120.748, 539.534, 130.691, 665.111, 125.48, 765.326, 111.235, 869.976, 89.2345, 954.41, 64.8557, 1028.74, 40.477, 1028.7, 178.019, 1028.7, 179.518, -1.37345, 136.1 )
 
-[node name="PlayerController" parent="." instance=ExtResource( 1 )]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1021.85, 602.319 )
+scale = Vector2( 2, 2 )
+current = true
+zoom = Vector2( 2, 2 )
 
-[node name="PlayerList" type="Node" parent="." groups=[
+[node name="PlayerList" type="Node" parent="Camera2D" groups=[
 "PlayerList",
 ]]
 
-[node name="Player1" parent="PlayerList" instance=ExtResource( 3 )]
-position = Vector2( 912.779, 332.067 )
+[node name="Player1" parent="Camera2D/PlayerList" instance=ExtResource( 3 )]
+position = Vector2( 1928.63, 676.678 )
 physics_material_override = SubResource( 1 )
 
-[node name="Player2" parent="PlayerList" instance=ExtResource( 3 )]
-position = Vector2( 133.74, 298.932 )
+[node name="Player2" parent="Camera2D/PlayerList" instance=ExtResource( 3 )]
+position = Vector2( 184.683, 622.566 )
 physics_material_override = SubResource( 1 )
 
-[editable path="PlayerController"]
+[node name="PlayerController" parent="Camera2D" instance=ExtResource( 1 )]
+position = Vector2( -495.94, -295.167 )

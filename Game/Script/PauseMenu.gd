@@ -5,7 +5,7 @@ var scene_reset
 
 func _ready():
 	controller = get_parent()
-	scene_reset = controller.get_parent().get_filename()
+	scene_reset = controller.get_owner().get_filename()
 
 func _process(delta):
 	get_button_input()

@@ -11,10 +11,10 @@
 friction = 0.6
 absorbent = true
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 26.2779, 10.2531 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.313726, 0.67451, 0.152941, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -55,14 +55,14 @@ polygon = PoolVector2Array( 13.3056, 67.1896, 14.057, -44.2752, 2.77366, -71.247
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( -19.3494, -18.044 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="HitPoints" type="Panel" parent="."]
 margin_left = -87.0023
 margin_top = 41.3416
 margin_right = 84.9977
 margin_bottom = 61.3416
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

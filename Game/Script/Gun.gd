@@ -1,6 +1,6 @@
 extends Node2D
 
-export var muzzle_velocity = 600
+export var muzzle_velocity = 1000
 export var bullet_gravity = 750
 
 func _process(delta):

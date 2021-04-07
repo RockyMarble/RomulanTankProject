@@ -6,7 +6,7 @@
 absorbent = true
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 492, 19 )
+extents = Vector2( 1035.6, 50.3051 )
 
 [node name="StaticBody2D" type="StaticBody2D" groups=[
 "Floor",
@@ -19,6 +19,6 @@ physics_material_override = SubResource( 1 )
 shape = SubResource( 2 )
 
 [node name="ground" type="Sprite" parent="."]
-position = Vector2( 7.62939e-06, 0 )
-scale = Vector2( 13.6552, 0.530229 )
+position = Vector2( 1.12247, 2.24494 )
+scale = Vector2( 28.7149, 1.3409 )
 texture = ExtResource( 1 )
