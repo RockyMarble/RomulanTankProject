@@ -8,7 +8,7 @@
 friction = 0.6
 absorbent = true
 
-[node name="LevelOne" type="Node2D"]
+[node name="Level" type="Node2D"]
 
 [node name="Grassy-Curve" type="Sprite" parent="."]
 position = Vector2( 511.742, 300.539 )

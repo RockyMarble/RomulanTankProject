@@ -9,6 +9,8 @@ var current_player = 0
 var amt_dead = 0
 var paused = false
 
+signal game_end
+
 #Searches the World for PlayerList and sets it to a variable
 #Adds the first child as the current player (WATCH OUT FOR BUGS WITH THIS)
 #Connects to "death" signal from each TankRigid object
@@ -89,4 +91,6 @@ func _on_Player_death():
 func end_game():
 	print("Player " + str(current_player + 1) + " Won!")
 	yield(get_tree().create_timer(1),"timeout")
-	get_tree().change_scene("res://scenes/TitleScreen.tscn")
+	#get_tree().change_scene("res://scenes/TitleScreen.tscn")
+	get_parent().get_parent().call("change_level")
+	

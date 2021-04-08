@@ -5,7 +5,7 @@
 [ext_resource path="res://images/Backgrounds/WinterDark.png" type="Texture" id=3]
 [ext_resource path="res://scenes/PlayerListTwo.tscn" type="PackedScene" id=4]
 
-[node name="Level-WinderDark" type="Node2D"]
+[node name="Level" type="Node2D"]
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 530.411, 519.795 )

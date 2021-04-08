@@ -10,7 +10,7 @@
 friction = 0.6
 absorbent = true
 
-[node name="Level-DesertDay" type="Node2D"]
+[node name="Level" type="Node2D"]
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 3 )]
 position = Vector2( 543.775, 509.236 )
