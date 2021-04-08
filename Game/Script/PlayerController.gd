@@ -87,10 +87,8 @@ func _on_Player_death():
 		end_game()
 		
 # Nothing exciting yet, but the game does end!
-# TODO: Scene change, on-screen winner display
 func end_game():
 	print("Player " + str(current_player + 1) + " Won!")
 	yield(get_tree().create_timer(1),"timeout")
-	#get_tree().change_scene("res://scenes/TitleScreen.tscn")
 	get_parent().get_parent().call("change_level")
 	
