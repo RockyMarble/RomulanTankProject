@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://audio/audio_hero_Explosion7LargeBooModdedWav.wav" type="AudioStream" id=1]
 [ext_resource path="res://Script/PlayerController.gd" type="Script" id=2]
 [ext_resource path="res://Script/OptionButton.gd" type="Script" id=3]
 [ext_resource path="res://audio/tankMovementWav1.wav" type="AudioStream" id=4]
+[ext_resource path="res://audio/tankMoveTurret1.wav" type="AudioStream" id=5]
 
 [node name="PlayerController" type="Node2D"]
 z_index = 1
@@ -99,9 +100,18 @@ pitch_scale = 0.47
 [node name="TimeBetweenPlayer" type="Timer" parent="."]
 wait_time = 2.5
 one_shot = true
+
+[node name="SoundMoveTurret" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -22.214
+pitch_scale = 0.64
 [connection signal="button_down" from="ButtonList/RIGHT" to="." method="_on_RIGHT_button_down"]
 [connection signal="button_up" from="ButtonList/RIGHT" to="." method="_on_RIGHT_button_up"]
 [connection signal="button_down" from="ButtonList/LEFT" to="." method="_on_LEFT_button_down"]
 [connection signal="button_up" from="ButtonList/LEFT" to="." method="_on_LEFT_button_up"]
 [connection signal="pressed" from="ButtonList/SHOOT" to="." method="_on_SHOOT_pressed"]
+[connection signal="button_down" from="ButtonList/Plus" to="." method="_on_Plus_button_down"]
+[connection signal="button_up" from="ButtonList/Plus" to="." method="_on_Plus_button_up"]
+[connection signal="button_down" from="ButtonList/Minus" to="." method="_on_Minus_button_down"]
+[connection signal="button_up" from="ButtonList/Minus" to="." method="_on_Minus_button_up"]
 [connection signal="item_selected" from="OptionButton" to="." method="_on_OptionButton_item_selected"]

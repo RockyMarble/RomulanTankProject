@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://images/Tanks/TankBodyGreen.png" type="Texture" id=1]
 [ext_resource path="res://Script/TankRigid.gd" type="Script" id=2]
@@ -6,15 +6,17 @@
 [ext_resource path="res://images/Projectile/Blue.PNG" type="Texture" id=4]
 [ext_resource path="res://audio/soundbits_ComputerSFX_short-040Wav.wav" type="AudioStream" id=5]
 [ext_resource path="res://audio/leisure_video_game_retro_8bit_explosion_001Wav.wav" type="AudioStream" id=6]
+[ext_resource path="res://audio/tankShootHE2.wav" type="AudioStream" id=7]
+[ext_resource path="res://audio/tankShootHE1.wav" type="AudioStream" id=8]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.6
 absorbent = true
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 26.2779, 10.2531 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.313726, 0.67451, 0.152941, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -55,14 +57,14 @@ polygon = PoolVector2Array( 13.3056, 67.1896, 14.057, -44.2752, 2.77366, -71.247
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( -19.3494, -18.044 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="HitPoints" type="Panel" parent="."]
 margin_left = -87.0023
 margin_top = 41.3416
 margin_right = 84.9977
 margin_bottom = 61.3416
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -98,3 +100,11 @@ volume_db = -30.0
 [node name="SoundPlayerDedz" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 volume_db = -10.0
+
+[node name="SoundShootCannon" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -10.097
+
+[node name="SoundShootCluster" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -10.097
