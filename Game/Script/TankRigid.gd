@@ -4,6 +4,7 @@ extends RigidBody2D
 var left_vector = Vector2(-30, 0)
 var right_vector = Vector2(30, 0)
 var hp = 100
+var fuel = 200
 var current_weapon = 0
 
 var flipping = false
@@ -21,10 +22,14 @@ func _physics_process(delta):
 
 
 func move_left():
-	apply_central_impulse(left_vector)
+	if fuel > 0:
+		apply_central_impulse(left_vector)
+		update_fuel(-1)
 
 func move_right():
-	apply_central_impulse(right_vector)
+	if fuel > 0:
+		apply_central_impulse(right_vector)
+		update_fuel(-1)
 
 func keep_upright():
 	if rotation_degrees < -25:
@@ -40,6 +45,10 @@ func rotate_right():
 
 func update_hp():
 	$HitPoints/Label.text = "HP: " + str(hp)
+
+func update_fuel(amt):
+	fuel += amt
+	$Fuel/Label.text = "FUEL: " + str(fuel)
 
 func update_current_player(var value):
 	$CurrentPlayer.visible = value
