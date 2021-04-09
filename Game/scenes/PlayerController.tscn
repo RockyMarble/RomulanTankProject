@@ -82,9 +82,9 @@ volume_db = -4.0
 
 [node name="OptionButton" type="OptionButton" parent="."]
 margin_left = 30.204
-margin_top = 15.102
-margin_right = 59.204
-margin_bottom = 35.102
+margin_top = 14.102
+margin_right = 154.204
+margin_bottom = 34.102
 text = "Select Weapon"
 script = ExtResource( 3 )
 __meta__ = {

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tankShootEnergy2.wav-c820ec1524ee4acd1c5f0bb70c4f5885.sample"
+
+[deps]
+
+source_file="res://audio/tankShootEnergy2.wav"
+dest_files=[ "res://.import/tankShootEnergy2.wav-c820ec1524ee4acd1c5f0bb70c4f5885.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

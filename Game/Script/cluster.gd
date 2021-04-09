@@ -22,7 +22,7 @@ func _on_Node2D_body_entered(body):
 	velocity.x = 0
 	velocity.y = 0
 	bullet_gravity = 0
-	
+	$SoundClusterPop.play()
 	var counter = 5
 	while (counter > 0):
 		spawn_bomb()
