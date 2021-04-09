@@ -10,7 +10,8 @@ absorbent = true
 [node name="LevelOne" type="Node2D"]
 
 [node name="Ground" type="StaticBody2D" parent="."]
-position = Vector2( 1.18921, 455.466 )
+position = Vector2( -16.6287, 861.716 )
+scale = Vector2( 2, 2 )
 collision_layer = 2
 collision_mask = 2
 
@@ -66,18 +67,23 @@ __meta__ = {
 position = Vector2( 1.63248, 1.33484 )
 polygon = PoolVector2Array( -2.07169, -2.55084, 182.178, 29.4492, 297.428, 48.9492, 419.01, -8.62863, 711.932, 69.8272, 1022.67, 69.736, 1022, 113.786, -2.57127, 127.408 )
 
-[node name="PlayerList" type="Node" parent="." groups=[
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1022.75, 602.248 )
+scale = Vector2( 2, 2 )
+current = true
+zoom = Vector2( 2, 2 )
+
+[node name="PlayerController" parent="Camera2D" instance=ExtResource( 1 )]
+position = Vector2( -493.558, -302.906 )
+
+[node name="PlayerList" type="Node" parent="Camera2D" groups=[
 "PlayerList",
 ]]
 
-[node name="Player1" parent="PlayerList" instance=ExtResource( 2 )]
-position = Vector2( 821.665, 459.203 )
+[node name="Player1" parent="Camera2D/PlayerList" instance=ExtResource( 2 )]
+position = Vector2( 1726.82, 954.543 )
 physics_material_override = SubResource( 1 )
 
-[node name="Player2" parent="PlayerList" instance=ExtResource( 2 )]
-position = Vector2( 128.442, 425.008 )
+[node name="Player2" parent="Camera2D/PlayerList" instance=ExtResource( 2 )]
+position = Vector2( 228.223, 838.385 )
 physics_material_override = SubResource( 1 )
-
-[node name="PlayerController" parent="." instance=ExtResource( 1 )]
-
-[editable path="PlayerController"]

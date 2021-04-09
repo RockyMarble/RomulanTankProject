@@ -1,9 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://scenes/Ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/TempImage/red.png" type="Texture" id=1]
 [ext_resource path="res://scenes/PlayerController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://images/Backgrounds/DesertNight.png" type="Texture" id=3]
 [ext_resource path="res://scenes/TankRigid.tscn" type="PackedScene" id=4]
+
+[sub_resource type="PhysicsMaterial" id=2]
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1035.6, 50.3051 )
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.6
@@ -11,29 +17,45 @@ absorbent = true
 
 [node name="Level-DesertNight" type="Node2D"]
 
-[node name="StaticBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 530.411, 519.795 )
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=[
+"Floor",
+]]
+position = Vector2( 540.097, 1048.45 )
 scale = Vector2( 1.1, 1 )
+collision_layer = 3
+physics_material_override = SubResource( 2 )
 
-[node name="PlayerController" parent="." instance=ExtResource( 2 )]
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 400.411, 207.046 )
+shape = SubResource( 3 )
+
+[node name="ground" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 405.508, 197.757 )
+scale = Vector2( 30.2107, 1.17307 )
+texture = ExtResource( 1 )
 
 [node name="DesertNight" type="Sprite" parent="."]
-position = Vector2( 510.674, 232.727 )
-scale = Vector2( 0.434999, 0.434999 )
+position = Vector2( 1011.99, 712.902 )
+scale = Vector2( 0.854853, 0.854853 )
 texture = ExtResource( 3 )
 
-[node name="PlayerList" type="Node" parent="." groups=[
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1013.06, 844.582 )
+scale = Vector2( 2, 2 )
+current = true
+zoom = Vector2( 2, 2 )
+
+[node name="PlayerList" type="Node" parent="Camera2D" groups=[
 "PlayerList",
 ]]
 
-[node name="Player1" parent="PlayerList" instance=ExtResource( 4 )]
-position = Vector2( 820.606, 439.073 )
+[node name="Player1" parent="Camera2D/PlayerList" instance=ExtResource( 4 )]
+position = Vector2( 1616.68, 1161.23 )
 physics_material_override = SubResource( 1 )
 
-[node name="Player2" parent="PlayerList" instance=ExtResource( 4 )]
-position = Vector2( 140.096, 443.019 )
+[node name="Player2" parent="Camera2D/PlayerList" instance=ExtResource( 4 )]
+position = Vector2( 356.532, 1156.54 )
 physics_material_override = SubResource( 1 )
 
-[editable path="StaticBody2D"]
-
-[editable path="PlayerController"]
+[node name="PlayerController" parent="Camera2D" instance=ExtResource( 2 )]
+position = Vector2( -499.89, -287.511 )

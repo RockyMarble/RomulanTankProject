@@ -26,5 +26,4 @@ func _on_bullet_body_entered(body):
 	var explosion_instance = explosion.instance()
 	explosion_instance.position = self.position
 	get_parent().add_child(explosion_instance)
-	
 	queue_free()

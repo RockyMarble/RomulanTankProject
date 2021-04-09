@@ -23,7 +23,7 @@ func _ready():
 	player.update_current_player(true)
 
 func _process(delta):
-	if not paused:
+	if not paused and $TimeBetweenPlayer.is_stopped():
 		get_button_input()
 	if player.dead:
 		iterate_player()
@@ -32,6 +32,7 @@ func _process(delta):
 #sets the icon ,indicating which player turn it is, to on or off
 #Then sets the current weapon of that player to the optionlist
 func iterate_player():
+	$TimeBetweenPlayer.start()
 	current_player += 1
 	if current_player >= len(get_tree().get_nodes_in_group("Player")):
 		current_player = 0
@@ -44,16 +45,24 @@ func iterate_player():
 
 #Calls shoot function in the player then iterates thru the player
 func _on_SHOOT_pressed():
-	player.shoot()
-	$SoundPlayerShoot.play()
-	iterate_player()
+	if not paused and $TimeBetweenPlayer.is_stopped():
+		player.shoot()
+		$SoundPlayerShoot.play()
+		iterate_player()
 
 #detects for inputs
 func get_button_input():
 	if $ButtonList/RIGHT.pressed:
 		player.move_right()
-	elif $ButtonList/LEFT.pressed:
+		#$SoundTankMovement.play()
+	#if not $ButtonList/RIGHT.pressed:
+		#$SoundTankMovement.stop()
+	
+	if $ButtonList/LEFT.pressed:
 		player.move_left()
+		#$SoundTankMovement.play()
+	#if not $ButtonList/LEFT.pressed:
+		#$SoundTankMovement.stop()
 	
 	if $ButtonList/Plus.pressed:
 		player.rotate_right()
@@ -67,6 +76,7 @@ func pause():
 	paused = true
 	var menu = load("res://scenes/PauseMenu.tscn").instance()
 	add_child(menu)
+	print(get_children())
 
 #sets player weapon to the optionselect
 func _on_OptionButton_item_selected(index):
@@ -83,3 +93,26 @@ func end_game():
 	print("Player " + str(current_player + 1) + " Won!")
 	yield(get_tree().create_timer(1),"timeout")
 	get_tree().change_scene("res://scenes/TitleScreen.tscn")
+
+
+func _on_RIGHT_button_down():
+	if not paused and $TimeBetweenPlayer.is_stopped():
+		$SoundTankMovement.play()
+
+func _on_LEFT_button_down():
+	if not paused and $TimeBetweenPlayer.is_stopped():
+		$SoundTankMovement.play()
+
+func _on_RIGHT_button_up():
+	if not paused and $TimeBetweenPlayer.is_stopped():
+		$SoundTankMovement.stop()
+
+func _on_LEFT_button_up():
+	if not paused and $TimeBetweenPlayer.is_stopped():
+		$SoundTankMovement.stop()
+
+
+
+
+
+

@@ -1,19 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://audio/audio_hero_Explosion7LargeBooModdedWav.wav" type="AudioStream" id=1]
 [ext_resource path="res://Script/PlayerController.gd" type="Script" id=2]
 [ext_resource path="res://Script/OptionButton.gd" type="Script" id=3]
+[ext_resource path="res://audio/tankMovementWav1.wav" type="AudioStream" id=4]
 
-[node name="PlayerController" type="Node"]
+[node name="PlayerController" type="Node2D"]
+z_index = 1
 script = ExtResource( 2 )
 
-[node name="ButtonList" type="Node" parent="."]
+[node name="ButtonList" type="Node2D" parent="."]
 
 [node name="RIGHT" type="Button" parent="ButtonList"]
 margin_left = 73.0482
 margin_top = 526.236
 margin_right = 142.048
 margin_bottom = 577.236
+action_mode = 0
 text = "RIGHT"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -24,6 +27,7 @@ margin_left = 4.04825
 margin_top = 526.236
 margin_right = 73.0482
 margin_bottom = 577.236
+action_mode = 0
 text = "LEFT"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -62,10 +66,10 @@ __meta__ = {
 [node name="Pause" type="Button" parent="ButtonList"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -104.593
-margin_top = 25.0
-margin_right = -31.593
-margin_bottom = 85.0
+margin_left = 923.373
+margin_top = 26.6818
+margin_right = 996.372
+margin_bottom = 86.6818
 grow_horizontal = 0
 text = "||"
 __meta__ = {
@@ -78,13 +82,26 @@ volume_db = -4.0
 
 [node name="OptionButton" type="OptionButton" parent="."]
 margin_left = 30.204
-margin_top = 15.102
-margin_right = 59.204
-margin_bottom = 35.102
+margin_top = 14.102
+margin_right = 154.204
+margin_bottom = 34.102
 text = "Select Weapon"
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SoundTankMovement" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -6.042
+pitch_scale = 0.47
+
+[node name="TimeBetweenPlayer" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+[connection signal="button_down" from="ButtonList/RIGHT" to="." method="_on_RIGHT_button_down"]
+[connection signal="button_up" from="ButtonList/RIGHT" to="." method="_on_RIGHT_button_up"]
+[connection signal="button_down" from="ButtonList/LEFT" to="." method="_on_LEFT_button_down"]
+[connection signal="button_up" from="ButtonList/LEFT" to="." method="_on_LEFT_button_up"]
 [connection signal="pressed" from="ButtonList/SHOOT" to="." method="_on_SHOOT_pressed"]
 [connection signal="item_selected" from="OptionButton" to="." method="_on_OptionButton_item_selected"]

@@ -11,22 +11,29 @@ absorbent = true
 
 [node name="World" type="Node2D"]
 
-[node name="PlayerController2" parent="." instance=ExtResource( 1 )]
+[node name="Ground" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512.917, 992.877 )
 
-[node name="PlayerList" type="Node" parent="." groups=[
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 523.512, 528.833 )
+scale = Vector2( 2, 2 )
+current = true
+zoom = Vector2( 2, 2 )
+
+[node name="PlayerList" type="Node" parent="Camera2D" groups=[
 "PlayerList",
 ]]
 
-[node name="Player1" parent="PlayerList" instance=ExtResource( 5 )]
-position = Vector2( 821.665, 459.203 )
+[node name="Player1" parent="Camera2D/PlayerList" instance=ExtResource( 5 )]
+position = Vector2( 1230.62, 889.345 )
 physics_material_override = SubResource( 1 )
 
-[node name="Player2" parent="PlayerList" instance=ExtResource( 5 )]
-position = Vector2( 134.799, 464.208 )
+[node name="Player2" parent="Camera2D/PlayerList" instance=ExtResource( 5 )]
+position = Vector2( -331.365, 887.993 )
 physics_material_override = SubResource( 1 )
 
-[node name="Ground" parent="." instance=ExtResource( 2 )]
-position = Vector2( 512.917, 514 )
+[node name="PlayerController2" parent="Camera2D" instance=ExtResource( 1 )]
+position = Vector2( -512.917, -292.572 )
 
 [node name="MusicLvlAmb" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
