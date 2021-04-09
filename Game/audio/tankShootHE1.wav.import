@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tankShootHE1.wav-7310a236cf76720d716a1e2d75ef8590.sample"
+
+[deps]
+
+source_file="res://audio/tankShootHE1.wav"
+dest_files=[ "res://.import/tankShootHE1.wav-7310a236cf76720d716a1e2d75ef8590.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

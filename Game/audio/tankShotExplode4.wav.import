@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tankShotExplode4.wav-6b70828c0505597b052638ee6830f57a.sample"
+
+[deps]
+
+source_file="res://audio/tankShotExplode4.wav"
+dest_files=[ "res://.import/tankShotExplode4.wav-6b70828c0505597b052638ee6830f57a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

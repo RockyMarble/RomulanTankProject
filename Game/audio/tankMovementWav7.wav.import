@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tankMovementWav7.wav-319a9d6c79e00c5ea5e1ad1a0568b64d.sample"
+
+[deps]
+
+source_file="res://audio/tankMovementWav7.wav"
+dest_files=[ "res://.import/tankMovementWav7.wav-319a9d6c79e00c5ea5e1ad1a0568b64d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
