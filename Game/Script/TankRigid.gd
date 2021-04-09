@@ -55,8 +55,10 @@ func shoot():
 	match current_weapon:
 		0:
 			gun.shoot_default()
+			$SoundShootCannon.play()
 		1:
 			gun.shoot_cluster()
+			$SoundShootCluster.play()
 
 #damage calculations
 func take_damage(amount):

@@ -47,30 +47,26 @@ func iterate_player():
 func _on_SHOOT_pressed():
 	if not paused and $TimeBetweenPlayer.is_stopped():
 		player.shoot()
-		$SoundPlayerShoot.play()
+		#$SoundPlayerShoot.play()
 		iterate_player()
 
 #detects for inputs
 func get_button_input():
 	if $ButtonList/RIGHT.pressed:
 		player.move_right()
-		#$SoundTankMovement.play()
-	#if not $ButtonList/RIGHT.pressed:
-		#$SoundTankMovement.stop()
 	
 	if $ButtonList/LEFT.pressed:
 		player.move_left()
-		#$SoundTankMovement.play()
-	#if not $ButtonList/LEFT.pressed:
-		#$SoundTankMovement.stop()
 	
 	if $ButtonList/Plus.pressed:
 		player.rotate_right()
+	
 	if $ButtonList/Minus.pressed:
 		player.rotate_left()
-		
+	
 	if $ButtonList/Pause.pressed:
 		pause()
+
 
 func pause():
 	paused = true
@@ -94,7 +90,7 @@ func end_game():
 	yield(get_tree().create_timer(1),"timeout")
 	get_tree().change_scene("res://scenes/TitleScreen.tscn")
 
-
+# sfx functions for movement of tank
 func _on_RIGHT_button_down():
 	if not paused and $TimeBetweenPlayer.is_stopped():
 		$SoundTankMovement.play()
@@ -110,3 +106,20 @@ func _on_RIGHT_button_up():
 func _on_LEFT_button_up():
 	if not paused and $TimeBetweenPlayer.is_stopped():
 		$SoundTankMovement.stop()
+
+# sfx functions for manipulating tank turret
+func _on_Plus_button_down():
+	if not paused and $TimeBetweenPlayer.is_stopped():
+		$SoundMoveTurret.play()
+
+func _on_Minus_button_down():
+	if not paused and $TimeBetweenPlayer.is_stopped():
+		$SoundMoveTurret.play()
+
+func _on_Plus_button_up():
+	#if not paused and $TimeBetweenPlayer.is_stopped():
+		$SoundMoveTurret.stop()
+
+func _on_Minus_button_up():
+	#if not paused and $TimeBetweenPlayer.is_stopped():
+		$SoundMoveTurret.stop()
