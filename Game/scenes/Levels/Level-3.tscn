@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/PlayerController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://images/Backgrounds/WinterDark.png" type="Texture" id=3]
 [ext_resource path="res://scenes/TankRigid.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/KillFloor.tscn" type="PackedScene" id=5]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.6
@@ -40,5 +41,9 @@ physics_material_override = SubResource( 1 )
 
 [node name="PlayerController" parent="Camera2D" instance=ExtResource( 2 )]
 position = Vector2( -498.444, -292.082 )
+
+[node name="KillFloor" parent="." instance=ExtResource( 5 )]
+position = Vector2( -1395.8, -743.213 )
+scale = Vector2( 2, 2 )
 
 [editable path="StaticBody2D"]

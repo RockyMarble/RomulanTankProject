@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://images/TempImage/red.png" type="Texture" id=1]
 [ext_resource path="res://scenes/PlayerController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://images/Backgrounds/DesertNight.png" type="Texture" id=3]
 [ext_resource path="res://scenes/TankRigid.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/KillFloor.tscn" type="PackedScene" id=5]
 
 [sub_resource type="PhysicsMaterial" id=1]
 absorbent = true
@@ -59,3 +60,7 @@ physics_material_override = SubResource( 3 )
 
 [node name="PlayerController" parent="Camera2D" instance=ExtResource( 2 )]
 position = Vector2( -499.89, -287.511 )
+
+[node name="KillFloor" parent="." instance=ExtResource( 5 )]
+position = Vector2( -413.11, 4.89175 )
+scale = Vector2( 2, 2 )

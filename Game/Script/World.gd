@@ -5,7 +5,7 @@ extends Node2D
 
 export var lvl_count = 3 # Editable in Scene Editor
 onready var lvl_num = 1
-onready var level = load("res://scenes/levels/Level-" + str(lvl_num) + ".tscn").instance()
+onready var level = load("res://scenes/Levels/Level-" + str(lvl_num) + ".tscn").instance()
 
 
 # Add Level child (incl. Camera2D, PlayerController, PlayerList, and Ground)
@@ -15,7 +15,7 @@ func _ready():
 	$Camera2D.queue_free()
 	
 	lvl_num += 1
-	level = load("res://scenes/levels/Level-" + str(lvl_num) + ".tscn").instance()
+	level = load("res://scenes/Levels/Level-" + str(lvl_num) + ".tscn").instance()
 
 # Check for end of levels
 # If end:
