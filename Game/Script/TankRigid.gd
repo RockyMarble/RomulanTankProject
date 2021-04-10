@@ -3,12 +3,15 @@ extends RigidBody2D
 
 var left_vector = Vector2(-30, 0)
 var right_vector = Vector2(30, 0)
+var left_vector_slow = Vector2(-8,0)
+var right_vector_slow = Vector2(8,0)
 var hp = 100
 var fuel = 200
 var current_weapon = 0
 
 var flipping = false
 var dead = false
+var touching = false
 
 signal death
 
@@ -19,17 +22,26 @@ func _integrate_forces(state):
 
 func _physics_process(delta):
 	linear_velocity.x = clamp(linear_velocity.x, -100, 100)
+	
 
 
 func move_left():
 	if fuel > 0:
-		apply_central_impulse(left_vector)
-		update_fuel(-1)
+		if !touching:
+			apply_central_impulse(left_vector)
+			update_fuel(-1)
+		else:
+			apply_central_impulse(left_vector_slow)
+			update_fuel(-2)
 
 func move_right():
 	if fuel > 0:
-		apply_central_impulse(right_vector)
-		update_fuel(-1)
+		if !touching:
+			apply_central_impulse(right_vector)
+			update_fuel(-1)
+		else:
+			apply_central_impulse(right_vector_slow)
+			update_fuel(-2)
 
 func keep_upright():
 	if rotation_degrees < -25:
@@ -80,8 +92,17 @@ func take_damage(amount):
 
 func die():
 	dead = true
-	print("Dead") # debug
 	# Animations, score changes go here.
 	visible = false # Currently does not stop or restart the game
 	collision_mask = 0b0 # Stops bullets from hitting
 	emit_signal("death") # Sent to PlayerController object to tally death count
+
+
+func _on_RigidBody2D_body_shape_entered(body_id, body, body_shape, local_shape):
+	if str(body).begins_with("[Rigid"):
+		touching = true
+
+
+func _on_RigidBody2D_body_shape_exited(body_id, body, body_shape, local_shape):
+	if str(body).begins_with("[Rigid"):
+		touching = false

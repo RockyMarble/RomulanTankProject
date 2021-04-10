@@ -51,6 +51,8 @@ collision_mask = 3
 mass = 0.5
 physics_material_override = SubResource( 1 )
 gravity_scale = 6.0
+contacts_reported = 10
+contact_monitor = true
 linear_damp = 3.0
 script = ExtResource( 2 )
 
@@ -149,3 +151,5 @@ volume_db = -10.097
 [node name="SoundShootCluster" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 volume_db = -10.097
+[connection signal="body_shape_entered" from="." to="." method="_on_RigidBody2D_body_shape_entered"]
+[connection signal="body_shape_exited" from="." to="." method="_on_RigidBody2D_body_shape_exited"]
