@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://images/TempImage/red.png" type="Texture" id=1]
 [ext_resource path="res://Script/bullet.gd" type="Script" id=2]
@@ -6,6 +6,17 @@
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.81282
 height = 9.09476
+
+[sub_resource type="ParticlesMaterial" id=2]
+trail_divisor = 20
+emission_shape = 1
+emission_sphere_radius = 2.0
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 3.0
+color = Color( 0.811765, 0.811765, 0.811765, 1 )
 
 [node name="bullet" type="Area2D"]
 collision_layer = 3
@@ -19,4 +30,11 @@ shape = SubResource( 1 )
 position = Vector2( -0.471948, -7.39098e-06 )
 scale = Vector2( 0.256957, 0.108815 )
 texture = ExtResource( 1 )
+
+[node name="Bullet trail" type="Particles2D" parent="."]
+position = Vector2( 0.0733137, 0.122475 )
+amount = 50
+lifetime = 3.0
+local_coords = false
+process_material = SubResource( 2 )
 [connection signal="body_entered" from="." to="." method="_on_bullet_body_entered"]
