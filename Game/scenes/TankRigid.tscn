@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://images/Tanks/TankBodyGreen.png" type="Texture" id=1]
+[ext_resource path="res://images/Tanks/symTankGreen.png" type="Texture" id=1]
 [ext_resource path="res://Script/TankRigid.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Gun.tscn" type="PackedScene" id=3]
 [ext_resource path="res://images/Projectile/Blue.PNG" type="Texture" id=4]
@@ -14,7 +14,7 @@
 friction = 0.6
 absorbent = true
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.313726, 0.67451, 0.152941, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -27,7 +27,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.47451, 0.447059, 0.737255, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -66,14 +66,14 @@ texture = ExtResource( 1 )
 position = Vector2( -3.30357, 11.9349 )
 rotation = 1.57079
 scale = Vector2( -0.995936, 1.15265 )
-polygon = PoolVector2Array( 13.3056, 67.1896, 24.9413, 52.7996, 25.3396, 37.995, 40.083, 32.4862, 42.0751, 0.122558, 25.7377, -12.2719, 14.057, -44.2752, 2.77366, -71.2476, -12.2706, -76.1221, -23.1775, -56.9488, -22.8006, 56.4658, -11.8934, 72.3893, -2.11472, 66.5397 )
+polygon = PoolVector2Array( 26.5351, 32.4862, 41.6769, 19.7472, 42.0751, 0.122558, 25.8151, -14.5637, 2.00593, -72.3835, -16.102, -76.9991, -23.1775, -56.9488, -23.2732, 85.5077, -12.9129, 99.2794, 1.58448, 93.0425 )
 
 [node name="HitPoints" type="Panel" parent="."]
 margin_left = -87.0023
 margin_top = 41.3416
 margin_right = 84.9977
 margin_bottom = 61.3416
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -101,7 +101,7 @@ margin_left = -87.0023
 margin_top = 61.3416
 margin_right = 84.9977
 margin_bottom = 81.3416
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

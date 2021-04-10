@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/White.PNG-c4d1843a78b33463028c2656a7991134.stex"
+path="res://.import/symTankGreen.png-631018f07694d77aea479116db58e50d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Projectile/White.PNG"
-dest_files=[ "res://.import/White.PNG-c4d1843a78b33463028c2656a7991134.stex" ]
+source_file="res://images/Tanks/symTankGreen.png"
+dest_files=[ "res://.import/symTankGreen.png-631018f07694d77aea479116db58e50d.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

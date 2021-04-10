@@ -1,15 +1,106 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://scenes/PlayerController.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/Backgrounds/DesertDay.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Ground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://images/TempImage/sand.png" type="Texture" id=4]
-[ext_resource path="res://scenes/TankRigid.tscn" type="PackedScene" id=5]
+[ext_resource path="res://audio/tankShootEnergy2.wav" type="AudioStream" id=5]
 [ext_resource path="res://scenes/KillFloor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://audio/soundbits_ComputerSFX_short-040Wav.wav" type="AudioStream" id=7]
+[ext_resource path="res://images/Projectile/Blue.PNG" type="Texture" id=8]
+[ext_resource path="res://Script/TankRigid.gd" type="Script" id=9]
+[ext_resource path="res://audio/leisure_video_game_retro_8bit_explosion_001Wav.wav" type="AudioStream" id=10]
+[ext_resource path="res://scenes/Gun.tscn" type="PackedScene" id=11]
+[ext_resource path="res://audio/tankShootHE1.wav" type="AudioStream" id=12]
+[ext_resource path="res://audio/tankShootHE2.wav" type="AudioStream" id=13]
+[ext_resource path="res://images/Tanks/symTankGreen.png" type="Texture" id=14]
+[ext_resource path="res://images/Tanks/symTankRed.png" type="Texture" id=15]
+[ext_resource path="res://images/TempImage/red.png" type="Texture" id=16]
+[ext_resource path="res://Script/Gun.gd" type="Script" id=17]
+[ext_resource path="res://images/Tanks/TankBarrelRed.PNG" type="Texture" id=18]
+[ext_resource path="res://images/Projectile/White.PNG" type="Texture" id=19]
 
-[sub_resource type="PhysicsMaterial" id=1]
+[sub_resource type="PhysicsMaterial" id=4]
 friction = 0.6
 absorbent = true
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.313726, 0.67451, 0.152941, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.47451, 0.447059, 0.737255, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Curve" id=1]
+max_value = 100.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.677215, 100 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=11]
+curve = SubResource( 1 )
+
+[sub_resource type="Curve" id=12]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=13]
+curve = SubResource( 12 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 100.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping_curve = SubResource( 11 )
+scale = 0.6
+scale_curve = SubResource( 13 )
+
+[sub_resource type="Curve" id=6]
+max_value = 100.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.981013, 92.0455 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=7]
+curve = SubResource( 6 )
+
+[sub_resource type="Curve" id=8]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.987342, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=9]
+curve = SubResource( 8 )
+
+[sub_resource type="ParticlesMaterial" id=10]
+lifetime_randomness = 0.1
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 200.0
+initial_velocity_random = 0.1
+angular_velocity = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 70.0
+damping_random = 0.1
+damping_curve = SubResource( 7 )
+angle = -90.0
+scale = 0.1
+scale_curve = SubResource( 9 )
 
 [node name="Level" type="Node2D"]
 
@@ -35,13 +126,275 @@ zoom = Vector2( 2, 2 )
 "PlayerList",
 ]]
 
-[node name="Player1" parent="Camera2D/PlayerList" instance=ExtResource( 5 )]
+[node name="Player1" type="RigidBody2D" parent="Camera2D/PlayerList" groups=[
+"Player",
+]]
 position = Vector2( 598.316, 373.958 )
-physics_material_override = SubResource( 1 )
+collision_layer = 2
+collision_mask = 3
+mass = 0.5
+physics_material_override = SubResource( 4 )
+gravity_scale = 6.0
+contacts_reported = 10
+contact_monitor = true
+linear_damp = 3.0
+script = ExtResource( 9 )
 
-[node name="Player2" parent="Camera2D/PlayerList" instance=ExtResource( 5 )]
+[node name="Gun" parent="Camera2D/PlayerList/Player1" instance=ExtResource( 11 )]
+position = Vector2( -18.8775, -18.0085 )
+
+[node name="tank" type="Sprite" parent="Camera2D/PlayerList/Player1"]
+position = Vector2( 0, -15.874 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Camera2D/PlayerList/Player1"]
+position = Vector2( -3.30357, 11.9349 )
+rotation = 1.57079
+scale = Vector2( -0.995936, 1.15265 )
+polygon = PoolVector2Array( 26.5351, 32.4862, 41.6769, 19.7472, 42.0751, 0.122558, 25.8151, -14.5637, 2.00593, -72.3835, -16.102, -76.9991, -23.1775, -56.9488, -23.2732, 85.5077, -12.9129, 99.2794, 1.58448, 93.0425 )
+
+[node name="HitPoints" type="Panel" parent="Camera2D/PlayerList/Player1"]
+margin_left = -87.0023
+margin_top = 41.3416
+margin_right = 84.9977
+margin_bottom = 61.3416
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/PlayerList/Player1/HitPoints"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -7.0
+margin_right = 20.0
+margin_bottom = 7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "HP: 100"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fuel" type="Panel" parent="Camera2D/PlayerList/Player1"]
+margin_left = -87.0023
+margin_top = 61.3416
+margin_right = 84.9977
+margin_bottom = 81.3416
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/PlayerList/Player1/Fuel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -27.621
+margin_top = -6.21159
+margin_right = 35.379
+margin_bottom = 7.78841
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Fuel: 200"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentPlayer" type="Sprite" parent="Camera2D/PlayerList/Player1"]
+visible = false
+position = Vector2( -16.3226, -46.6398 )
+scale = Vector2( 1.61294, 1.43701 )
+texture = ExtResource( 8 )
+
+[node name="SoundPlayerTakeDamage" type="AudioStreamPlayer" parent="Camera2D/PlayerList/Player1"]
+stream = ExtResource( 7 )
+volume_db = -30.0
+
+[node name="SoundPlayerDedz" type="AudioStreamPlayer" parent="Camera2D/PlayerList/Player1"]
+stream = ExtResource( 10 )
+volume_db = -10.0
+
+[node name="SoundShootCannon" type="AudioStreamPlayer" parent="Camera2D/PlayerList/Player1"]
+stream = ExtResource( 12 )
+volume_db = -10.097
+
+[node name="SoundShootCluster" type="AudioStreamPlayer" parent="Camera2D/PlayerList/Player1"]
+stream = ExtResource( 13 )
+volume_db = -10.097
+
+[node name="SoundShootLaser" type="AudioStreamPlayer" parent="Camera2D/PlayerList/Player1"]
+stream = ExtResource( 5 )
+volume_db = -10.0
+
+[node name="Player2" type="RigidBody2D" parent="Camera2D/PlayerList" groups=[
+"Player",
+]]
 position = Vector2( -668.229, 373.008 )
-physics_material_override = SubResource( 1 )
+collision_layer = 2
+collision_mask = 3
+mass = 0.5
+physics_material_override = SubResource( 4 )
+gravity_scale = 6.0
+contacts_reported = 10
+contact_monitor = true
+linear_damp = 3.0
+script = ExtResource( 9 )
+
+[node name="Gun" type="Node2D" parent="Camera2D/PlayerList/Player2" groups=[
+"Gun",
+]]
+position = Vector2( -18.8775, -18.0085 )
+script = ExtResource( 17 )
+
+[node name="LaserRaycast" type="RayCast2D" parent="Camera2D/PlayerList/Player2/Gun"]
+position = Vector2( 100.14, 0.854576 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( 1500, 0 )
+collision_mask = 3
+collide_with_areas = true
+
+[node name="GunBarrel" type="Node2D" parent="Camera2D/PlayerList/Player2/Gun"]
+position = Vector2( 100.092, 0.588493 )
+rotation = -8.22034e-08
+
+[node name="laser" type="Sprite" parent="Camera2D/PlayerList/Player2/Gun"]
+visible = false
+position = Vector2( 847.762, 0.945073 )
+scale = Vector2( 20.735, 0.102003 )
+texture = ExtResource( 16 )
+
+[node name="gun" type="Sprite" parent="Camera2D/PlayerList/Player2/Gun"]
+position = Vector2( 17.9337, 8.34113 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 18 )
+
+[node name="SmokeParticle" type="Particles2D" parent="Camera2D/PlayerList/Player2/Gun"]
+position = Vector2( 100.031, 1.24006 )
+emitting = false
+amount = 50
+lifetime = 0.6
+one_shot = true
+explosiveness = 0.9
+randomness = 0.3
+process_material = SubResource( 5 )
+texture = ExtResource( 19 )
+
+[node name="LaserParticle" type="Particles2D" parent="Camera2D/PlayerList/Player2/Gun"]
+position = Vector2( 99.6094, 1.19055 )
+emitting = false
+amount = 30
+one_shot = true
+explosiveness = 0.9
+process_material = SubResource( 10 )
+texture = ExtResource( 16 )
+
+[node name="LaserTimer" type="Timer" parent="Camera2D/PlayerList/Player2/Gun"]
+wait_time = 0.2
+one_shot = true
+
+[node name="tank" type="Sprite" parent="Camera2D/PlayerList/Player2"]
+position = Vector2( 0, -15.874 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Camera2D/PlayerList/Player2"]
+position = Vector2( -3.30357, 11.9349 )
+rotation = 1.57079
+scale = Vector2( -0.995936, 1.15265 )
+polygon = PoolVector2Array( 26.5351, 32.4862, 41.6769, 19.7472, 42.0751, 0.122558, 25.8151, -14.5637, 2.00593, -72.3835, -16.102, -76.9991, -23.1775, -56.9488, -23.2732, 85.5077, -12.9129, 99.2794, 1.58448, 93.0425 )
+
+[node name="HitPoints" type="Panel" parent="Camera2D/PlayerList/Player2"]
+margin_left = -87.0023
+margin_top = 41.3416
+margin_right = 84.9977
+margin_bottom = 61.3416
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/PlayerList/Player2/HitPoints"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -7.0
+margin_right = 20.0
+margin_bottom = 7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "HP: 100"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fuel" type="Panel" parent="Camera2D/PlayerList/Player2"]
+margin_left = -87.0023
+margin_top = 61.3416
+margin_right = 84.9977
+margin_bottom = 81.3416
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/PlayerList/Player2/Fuel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -27.621
+margin_top = -6.21159
+margin_right = 35.379
+margin_bottom = 7.78841
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Fuel: 200"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentPlayer" type="Sprite" parent="Camera2D/PlayerList/Player2"]
+visible = false
+position = Vector2( -16.3226, -46.6398 )
+scale = Vector2( 1.61294, 1.43701 )
+texture = ExtResource( 8 )
+
+[node name="SoundPlayerTakeDamage" type="AudioStreamPlayer" parent="Camera2D/PlayerList/Player2"]
+stream = ExtResource( 7 )
+volume_db = -30.0
+
+[node name="SoundPlayerDedz" type="AudioStreamPlayer" parent="Camera2D/PlayerList/Player2"]
+stream = ExtResource( 10 )
+volume_db = -10.0
+
+[node name="SoundShootCannon" type="AudioStreamPlayer" parent="Camera2D/PlayerList/Player2"]
+stream = ExtResource( 12 )
+volume_db = -10.097
+
+[node name="SoundShootCluster" type="AudioStreamPlayer" parent="Camera2D/PlayerList/Player2"]
+stream = ExtResource( 13 )
+volume_db = -10.097
+
+[node name="SoundShootLaser" type="AudioStreamPlayer" parent="Camera2D/PlayerList/Player2"]
+stream = ExtResource( 5 )
+volume_db = -10.0
 
 [node name="PlayerController" parent="Camera2D" instance=ExtResource( 1 )]
 position = Vector2( -506.488, -304.901 )
@@ -49,5 +402,9 @@ position = Vector2( -506.488, -304.901 )
 [node name="KillFloor" parent="." instance=ExtResource( 6 )]
 position = Vector2( -1458.75, -787.812 )
 scale = Vector2( 2, 2 )
+[connection signal="body_shape_entered" from="Camera2D/PlayerList/Player1" to="Camera2D/PlayerList/Player1" method="_on_RigidBody2D_body_shape_entered"]
+[connection signal="body_shape_exited" from="Camera2D/PlayerList/Player1" to="Camera2D/PlayerList/Player1" method="_on_RigidBody2D_body_shape_exited"]
+[connection signal="body_shape_entered" from="Camera2D/PlayerList/Player2" to="Camera2D/PlayerList/Player2" method="_on_RigidBody2D_body_shape_entered"]
+[connection signal="body_shape_exited" from="Camera2D/PlayerList/Player2" to="Camera2D/PlayerList/Player2" method="_on_RigidBody2D_body_shape_exited"]
 
 [editable path="StaticBody2D"]
