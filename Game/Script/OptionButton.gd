@@ -5,3 +5,4 @@ extends OptionButton
 func _ready():
 	add_item("default")
 	add_item("cluster")
+	add_item("laser")

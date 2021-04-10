@@ -80,6 +80,9 @@ func shoot():
 		1:
 			gun.shoot_cluster()
 			$SoundShootCluster.play()
+		2:
+			gun.shoot_laser()
+			$SoundShootLaser.play()
 
 #damage calculations
 func take_damage(amount):
