@@ -2,6 +2,7 @@ extends Node2D
 
 export var muzzle_velocity = 600
 export var bullet_gravity = 750
+onready var smoke_particle := $SmokeParticle
 
 func _process(delta):
 	rotation_degrees = clamp(rotation_degrees, -180, 0)
@@ -13,7 +14,8 @@ func shoot_default():
 	b.global_transform = $GunBarrel.global_transform
 	b.velocity = b.transform.x * muzzle_velocity
 	b.bullet_gravity = bullet_gravity
-
+	gun_smoke()
+	
 #adds a cluster projectile with certain velocity
 func shoot_cluster():
 	var b = load("res://scenes/cluster.tscn").instance()
@@ -21,3 +23,7 @@ func shoot_cluster():
 	b.global_transform = $GunBarrel.global_transform
 	b.velocity = b.transform.x * muzzle_velocity
 	b.bullet_gravity = bullet_gravity
+	gun_smoke()
+
+func gun_smoke():
+	smoke_particle.emitting = true

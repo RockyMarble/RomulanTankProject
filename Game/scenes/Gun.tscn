@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Script/Gun.gd" type="Script" id=1]
 [ext_resource path="res://images/Tanks/TankBarrelGreen.png" type="Texture" id=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+trail_divisor = 5
+flag_disable_z = true
+spread = 20.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 167.38
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 2.26
 
 [node name="Gun" type="Node2D" groups=[
 "Gun",
@@ -16,3 +26,13 @@ rotation = -8.22034e-08
 position = Vector2( 17.9337, 8.34113 )
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
+
+[node name="SmokeParticle" type="Particles2D" parent="."]
+position = Vector2( 100.031, 1.24006 )
+emitting = false
+amount = 50
+lifetime = 0.2
+one_shot = true
+speed_scale = 1.88
+explosiveness = 0.67
+process_material = SubResource( 1 )
