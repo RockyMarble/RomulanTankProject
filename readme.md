@@ -80,7 +80,9 @@ Creating art and main menu for game. Backgrounds have been created, but not impl
 ### Nat Arney 
 sprint 2
 
-link to git repository [here](replace_with_link_to_repository)
+Level cycling, endgame, fuel system, and tank interactions.
+
+* Accomplishment: Created and implemented the level cycling in the Tank Game. When one level ends, the game cycles to the next in line (Level 1 to Level 2, 3, 4...) until there are no more levels to cycle through, at which point the game ends. [Link to code](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/World.gd).
 
 sprint 1
 Creation of basic terrain hitboxes, health functions of tanks, and damage functions for the game, and in game pause menu. Most functions created are currently implemented in game. 
@@ -124,7 +126,14 @@ sprint 1
 * Creation of animations in reaction to in game actions
 
 ### Nat Arney 
-sprint 2
+sprint2
+
+* Refactoring 
+* Bug squashing
+  * Audio bugs
+  * Visual (non-UI) bugs
+  * UI bugs
+* HP and Fuel representation updates
 
 sprint 1
 * Have levels end when only one tank remains on-screen
