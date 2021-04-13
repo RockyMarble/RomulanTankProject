@@ -67,12 +67,14 @@ Sprint 3: TODO
 
 ### Alexander Wilems
 sprint 2
+
 creation of most animations, modifications of tanks to be symmetrical. development of rudimentary points system, upscaling of map resolutions.
 
-*Accomplishment: Modification of symmetrical tanks allowing for less awkward player controls 
+* Accomplishment: Modification of symmetrical tanks allowing for less awkward player controls 
 link to git repository [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/images/Tanks/symTankGreen.png)
 
 sprint 1
+
 Creating art and main menu for game. Backgrounds have been created, but not implemented yet. 
 
 * Accomplishment: Creation of fully functioning Title Screen. creates a starting page for game, ability to exit if programm was opened accidentally, and allows start of game. Link to git repository for Main Menu [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/scenes/TitleScreen.tscn).
@@ -92,11 +94,13 @@ Creation of basic terrain hitboxes, health functions of tanks, and damage functi
 
 ### Benjamin Marble 
 sprint 2
+
 Curation and implementation of additional sound effects for new features. Sounds for new weapons, tank movement, and turret movement have been implemented into the game, as of Sprint 2.
 
 * Accomplishment: Implementation of the sound effects for tank movement and for when a player takes damage. When a weapon projectile hits something, a unique explosion sound effect immediatly plays. This makes the game feel more realistic since rounds now make a satisfying explosion upon impact. The cluster cannon shows off this feature, as it has additional explosions! Repository link to main gun firing sound effect here. (Please note this file has been worked on by multiple members for implementation of items only in the scope of support for that member.)
 
 sprint 1
+
 Curation and implementation of music and sound effects. Menu and level music, as well as basic sound effects for explosions have been implemented into the game, as of Sprint 1.
 
 * Accomplishment: Implementation of the sound effects for the tank weapon and for when a player takes damage. When a projectile is fired, the sound effect for the tank turret immediatly plays. The explosive sound is supposed to give the player a sense of power when firing the tank turret, boosting immersion and enjoyment of the game. Repository link to main gun firing sound effect [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/PlayerController.gd). *(Please note this file has been worked on by multiple members for implementation of items only in the scope of support for that member.)*
@@ -108,6 +112,7 @@ Added a function to keep track of which weapon is being used [here](https://bitb
 Added two new weapon types [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/Gun.gd)
 
 sprint 1
+
 Creating action groups such as shooting and movement for vehicles in-game. Also worked on slope movements, a mechanic currently not being implemented in demo of product. 
 
 * Accomplishment: Implementation of projectile motion physics being applied to collidable bodies. The creation of this allows for a more realistic engament during gameplay, as we will see the projectile simulating the affects of gravity. Link to this can be found [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/bullet.gd)
@@ -117,6 +122,7 @@ Creating action groups such as shooting and movement for vehicles in-game. Also 
 ## Moving Forward
 ### Alexander Wilems
 sprint 2
+
 * Renovation of bullet art
 * Addition of more Animations for quality of gameplay
 * Animation of numbers for lost health 
@@ -124,6 +130,7 @@ sprint 2
 * Add Particle Affects to Frickin Lasers (they will be named that by end of last sprint)
 
 sprint 1
+
 * Creation of supplementary art for other team members such as backgrounds, projectiles, tanks, and other needed Assets.
 * Update of current backgrounds and other assets for optimization and other such purposes.
 * Creation of animations in reaction to in game actions
@@ -152,6 +159,7 @@ sprint 2
 * Programming menu music function
 * Programming pause music function
 * Creation of weapons SFX for any additional new weapons
+* Programming menu SFX for all buttons
 * Make the credits have a button to shuffle the music. This is a utility to showcase the songs created by members of the project.
 sprint 1
 
@@ -162,11 +170,13 @@ sprint 1
 
 ### Adrian Lamphier
 sprint 2
+
 * Possibly add background music
 * Help with general polish of visual effects
 * Create more weapon types
 
 sprint 1
+
 * Design the shooting function to swap to different weapon types
 * Possibly adjust scale of tanks/map to allow more interesting weapons/map design
 * Create more weapon types
@@ -181,7 +191,7 @@ Based on Tanks 2 from coolmathgames.com
 
 * Reddit: u/RomulansTP
 
-*Template created by [@flynerdpl](https://www.flynerd.pl/)*
+* Template created by [@flynerdpl](https://www.flynerd.pl/)*
 
 
 ## Usage Credits
