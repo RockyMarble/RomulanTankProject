@@ -92,8 +92,9 @@ Creation of basic terrain hitboxes, health functions of tanks, and damage functi
 
 ### Benjamin Marble 
 sprint 2
+Curation and implementation of additional sound effects for new features. Sounds for new weapons, tank movement, and turret movement have been implemented into the game, as of Sprint 2.
 
-link to git repository [here](replace_with_link_to_repository)
+* Accomplishment: Implementation of the sound effects for tank movement and for when a player takes damage. When a weapon projectile hits something, a unique explosion sound effect immediatly plays. This makes the game feel more realistic since rounds now make a satisfying explosion upon impact. The cluster cannon shows off this feature, as it has additional explosions! Repository link to main gun firing sound effect here. (Please note this file has been worked on by multiple members for implementation of items only in the scope of support for that member.)
 
 sprint 1
 Curation and implementation of music and sound effects. Menu and level music, as well as basic sound effects for explosions have been implemented into the game, as of Sprint 1.
@@ -146,7 +147,14 @@ sprint 1
 ### Benjamin Marble 
 sprint 2
 
+* Creation of a credits screen
+* Creation of unique music for credits and new worlds
+* Programming menu music function
+* Programming pause music function
+* Creation of weapons SFX for any additional new weapons
+* Make the credits have a button to shuffle the music. This is a utility to showcase the songs created by members of the project.
 sprint 1
+
 * Creation and curation of general SFX for new items
 * Creation of unique background music for each new level
 * Creation of weapons SFX for new weapons
