@@ -28,6 +28,7 @@ More to come!
 ![inGameShot1](ReadMePhotos/GamePlayShot1.jpg)
 ![inGameShot2](ReadMePhotos/GamePlayShot2.jpg)
 ![inGameShot3](ReadMePhotos/GamePlayShot3.jpg)
+![inGameShot3](ReadMePhotos/Sprint2.gif)
 
 ## Technologies
 * Tech 1 - version 1.0 (c++ as base language), ,github, sourcetree, godot. 
