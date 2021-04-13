@@ -103,7 +103,8 @@ Curation and implementation of music and sound effects. Menu and level music, as
 ### Adrian Lamphier
 sprint 2
 
-link to git repository [here](replace_with_link_to_repository)
+Added a function to keep track of which weapon is being used [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/TankRigid.gd)
+Added two new weapon types [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/Gun.gd)
 
 sprint 1
 Creating action groups such as shooting and movement for vehicles in-game. Also worked on slope movements, a mechanic currently not being implemented in demo of product. 
@@ -153,6 +154,9 @@ sprint 1
 
 ### Adrian Lamphier
 sprint 2
+* Possibly add background music
+* Help with general polish of visual effects
+* Create more weapon types
 
 sprint 1
 * Design the shooting function to swap to different weapon types
