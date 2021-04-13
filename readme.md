@@ -85,6 +85,7 @@ Level cycling, endgame, fuel system, and tank interactions.
 * Accomplishment: Created and implemented the level cycling in the Tank Game. When one level ends, the game cycles to the next in line (Level 1 to Level 2, 3, 4...) until there are no more levels to cycle through, at which point the game ends. [Link to code](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/World.gd).
 
 sprint 1
+
 Creation of basic terrain hitboxes, health functions of tanks, and damage functions for the game, and in game pause menu. Most functions created are currently implemented in game. 
 
 * Accomplishment: Creation of health and damage mechanics for the tanks and projectiles. Creation of these allows for there to be an accomplishable goal in the game of dispatching your oppenent with the use of projectiles, and allows the game to have somewhat of an ending. Repository link to code can be found [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/TankRigid.gd). *(Please note, while health can run out in game, and player is dusted once dead, there is not yet an end of game mechanic for when only 1 player is left standing, to be added in next sprint.)*
@@ -130,12 +131,13 @@ sprint2
 
 * Refactoring 
 * Bug squashing
-  * Audio bugs
-  * Visual (non-UI) bugs
-  * UI bugs
+    * Audio bugs
+    * Visual (non-UI) bugs
+    * UI bugs
 * HP and Fuel representation updates
 
 sprint 1
+
 * Have levels end when only one tank remains on-screen
 * Swap to a different level when the previous one ends
 * Track "fuel"; disallow movement when fuel is 0
