@@ -27,7 +27,7 @@ More to come!
 ![MainMenuScreenShot](ReadMePhotos/MainMenuShot.jpg)
 ![inGameShot1](ReadMePhotos/GamePlayShot1.jpg)
 ![inGameShot2](ReadMePhotos/GamePlayShot2.jpg)
-![inGameShot3](ReadMePhotos/GamePlayShot3.jpg)
+![inGameShot3](ReadMePhotos/inGameShot3.jpg)
 ![inGameShot3](ReadMePhotos/Sprint2.gif)
 
 ## Technologies
@@ -70,8 +70,7 @@ sprint 2
 
 Creation of most animations, modifications of tanks to be symmetrical. Development of rudimentary points system, upscaling of map resolutions.
 
-* Accomplishment: Modification of symmetrical tanks allowing for less awkward player controls 
-link to git repository [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/images/Tanks/symTankGreen.png)
+* Accomplishment: Modification of symmetrical tanks allowing for less awkward player controls. Link to git repository [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/images/Tanks/symTankGreen.png)
 
 sprint 1
 
@@ -95,9 +94,9 @@ Creation of basic terrain hitboxes, health functions of tanks, and damage functi
 ### Benjamin Marble 
 sprint 2
 
-Sounds for new weapons, weapon projectile/sub-projectile explosions, tank movement, and turret movement have been created and implemented into the game. [Repository link](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/audio/) ![example](Game/audio/tankShotClusterExplode2.wav)
+Sounds for new weapons, weapon projectile/sub-projectile explosions, tank movement, and turret movement have been created and implemented into the game.
 
-* Accomplishment: Implementation of unique sound effects for each tank weapon and weapon projectile. Any weapon projectile that contacts a solid object will trigger the projectile's corresponding explosion sound effect. This makes the game feel more realistic since rounds now make a satisfying concussion upon impact. The cluster cannon shows off this feature, as it has additional explosions!
+* Accomplishment: Implementation of unique sound effects for each tank weapon projectile and projectile explosion. Any weapon projectile that contacts a solid object will trigger the projectile's corresponding explosion sound effect. This makes the game feel more realistic since rounds now make a satisfying concussion upon impact. The cluster cannon shows off this feature, as it has additional explosions! [Repository audio](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/audio/) ![Script for cluster explosions](Game/Script/clusterExplosion.gd) ![Script for initial cluster impact "pop"](Game/Script/cluster.gd)
 
 sprint 1
 
@@ -108,8 +107,9 @@ Curation and implementation of music and sound effects. Menu and level music, as
 ### Adrian Lamphier
 sprint 2
 
-Added a function to keep track of which weapon is being used [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/TankRigid.gd)
-Added two new weapon types [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/Gun.gd)
+Added a [function](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/TankRigid.gd) to keep track of which weapon is being used.
+Added two new [weapon types.](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/Gun.gd)
+* Accomplishment: Implementation of randomized bomb direction and momentum for the cluster cannon weapon. This prevents the possibility of the same cluster bomb spread pattern from repeating over and over, boosting realism and player immersion.
 
 sprint 1
 
@@ -156,9 +156,9 @@ sprint 2
 
 * Creation of a credits screen.
 * Creation of unique music for desert level, night level, and credits screen.
-* Program music functions for in-game pause menu and main menu.
-* Creation of weapons SFX for any additional new weapons.
-* Program menu SFX for all menu button interactions.
+* Program music functions for in-game pause menu, main menu and credits screen.
+* Create and program SFX for any additional new weapons.
+* Program SFX for all menu button interactions.
 * Balance weapons/health/damage values.
 
 sprint 1
