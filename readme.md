@@ -96,7 +96,7 @@ sprint 2
 
 Sounds for new weapons, weapon projectile/sub-projectile explosions, tank movement, and turret movement have been created and implemented into the game.
 
-* Accomplishment: Implementation of unique sound effects for each tank weapon projectile and projectile explosion. Any weapon projectile that contacts a solid object will trigger the projectile's corresponding explosion sound effect. This makes the game feel more realistic since rounds now make a satisfying concussion upon impact. The cluster cannon shows off this feature, as it has additional explosions! [Repository audio](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/audio/) ![Script for cluster explosions](Game/Script/clusterExplosion.gd) ![Script for initial cluster impact "pop"](Game/Script/cluster.gd)
+* Accomplishment: Implementation of unique sound effects for each tank weapon projectile and projectile explosion. Any weapon projectile that contacts a solid object will trigger the projectile's corresponding explosion sound effect. This makes the game feel more realistic since rounds now make a satisfying concussion upon impact. The cluster cannon shows off this feature, as it has additional explosions! [Repository audio](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/audio/) [Script for cluster explosions](Game/Script/clusterExplosion.gd) [Script for initial cluster impact "pop"](Game/Script/cluster.gd)
 
 sprint 1
 
@@ -109,6 +109,7 @@ sprint 2
 
 Added a [function](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/TankRigid.gd) to keep track of which weapon is being used.
 Added two new [weapon types.](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/Gun.gd)
+
 * Accomplishment: Implementation of randomized bomb direction and momentum for the cluster cannon weapon. This prevents the possibility of the same cluster bomb spread pattern from repeating over and over, boosting realism and player immersion.
 
 sprint 1
