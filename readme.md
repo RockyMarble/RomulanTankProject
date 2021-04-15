@@ -68,7 +68,7 @@ Sprint 3: TODO
 ### Alexander Wilems
 sprint 2
 
-creation of most animations, modifications of tanks to be symmetrical. development of rudimentary points system, upscaling of map resolutions.
+Creation of most animations, modifications of tanks to be symmetrical. Development of rudimentary points system, upscaling of map resolutions.
 
 * Accomplishment: Modification of symmetrical tanks allowing for less awkward player controls 
 link to git repository [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/images/Tanks/symTankGreen.png)
@@ -95,9 +95,9 @@ Creation of basic terrain hitboxes, health functions of tanks, and damage functi
 ### Benjamin Marble 
 sprint 2
 
-Curation and implementation of additional sound effects for new features. Sounds for new weapons, tank movement, and turret movement have been implemented into the game, as of Sprint 2.
+Sounds for new weapons, weapon projectile/sub-projectile explosions, tank movement, and turret movement have been created and implemented into the game. [Repository link](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/audio/) ![example](Game/audio/tankShotClusterExplode2.wav)
 
-* Accomplishment: Implementation of the sound effects for tank movement and for when a player takes damage. When a weapon projectile hits something, a unique explosion sound effect immediatly plays. This makes the game feel more realistic since rounds now make a satisfying explosion upon impact. The cluster cannon shows off this feature, as it has additional explosions! Repository link to main gun firing sound effect here. (Please note this file has been worked on by multiple members for implementation of items only in the scope of support for that member.)
+* Accomplishment: Implementation of unique sound effects for each tank weapon and weapon projectile. Any weapon projectile that contacts a solid object will trigger the projectile's corresponding explosion sound effect. This makes the game feel more realistic since rounds now make a satisfying concussion upon impact. The cluster cannon shows off this feature, as it has additional explosions!
 
 sprint 1
 
@@ -123,63 +123,63 @@ Creating action groups such as shooting and movement for vehicles in-game. Also 
 ### Alexander Wilems
 sprint 2
 
-* Renovation of bullet art
-* Addition of more Animations for quality of gameplay
-* Animation of numbers for lost health 
-* Increase resolution of tanks
-* Add Particle Affects to Frickin Lasers (they will be named that by end of last sprint)
+* Renovation of bullet art.
+* Addition of more Animations for quality of gameplay.
+* Animation of numbers for lost health.
+* Increase resolution of tanks.
+* Add Particle Affects to Frickin Lasers (they will be named that by end of last sprint).
 
 sprint 1
 
 * Creation of supplementary art for other team members such as backgrounds, projectiles, tanks, and other needed Assets.
 * Update of current backgrounds and other assets for optimization and other such purposes.
-* Creation of animations in reaction to in game actions
+* Creation of animations in reaction to in game actions.
 
 ### Nat Arney 
 sprint2
 
-* Refactoring 
-* Bug squashing
-    * Audio bugs
-    * Visual (non-UI) bugs
-    * UI bugs
-* HP and Fuel representation updates
+* Refactoring .
+* Bug squashing.
+    * Audio bugs.
+    * Visual (non-UI) bugs.
+    * UI bugs.
+* HP and Fuel representation updates.
 
 sprint 1
 
-* Have levels end when only one tank remains on-screen
-* Swap to a different level when the previous one ends
-* Track "fuel"; disallow movement when fuel is 0
+* Have levels end when only one tank remains on-screen.
+* Swap to a different level when the previous one ends.
+* Track "fuel"; disallow movement when fuel is 0.
 
 ### Benjamin Marble 
 sprint 2
 
-* Creation of a credits screen
-* Creation of unique music for credits and new worlds
-* Programming menu music function
-* Programming pause music function
-* Creation of weapons SFX for any additional new weapons
-* Programming menu SFX for all buttons
-* Make the credits have a button to shuffle the music. This is a utility to showcase the songs created by members of the project.
+* Creation of a credits screen.
+* Creation of unique music for desert level, night level, and credits screen.
+* Program music functions for in-game pause menu and main menu.
+* Creation of weapons SFX for any additional new weapons.
+* Program menu SFX for all menu button interactions.
+* Balance weapons/health/damage values.
+
 sprint 1
 
-* Creation and curation of general SFX for new items
-* Creation of unique background music for each new level
-* Creation of weapons SFX for new weapons
-* Creation of a "killfloor", an offscreen floor sets player health to zero for when they fall off the map
+* Creation and curation of general SFX for new items.
+* Creation of unique background music for each new level.
+* Creation of weapons SFX for new weapons.
+* Creation of a "killfloor", an offscreen floor that sets a player's health to zero for when they fall off the map.
 
 ### Adrian Lamphier
 sprint 2
 
-* Possibly add background music
-* Help with general polish of visual effects
-* Create more weapon types
+* Possibly add background music.
+* Help with general polish of visual effects.
+* Create more weapon types.
 
 sprint 1
 
-* Design the shooting function to swap to different weapon types
-* Possibly adjust scale of tanks/map to allow more interesting weapons/map design
-* Create more weapon types
+* Design the shooting function to swap to different weapon types.
+* Possibly adjust scale of tanks/map to allow more interesting weapons/map design.
+* Create more weapon types.
 
 ## Inspiration
 Based on Tanks 2 from coolmathgames.com
