@@ -6,7 +6,9 @@ var right_vector = Vector2(30, 0)
 var left_vector_slow = Vector2(-8,0)
 var right_vector_slow = Vector2(8,0)
 var hp = 100
-var fuel = 200
+var hp_max = 100
+var fuel = 300
+var fuel_max = 300
 var current_weapon = 0
 
 var flipping = false
@@ -59,7 +61,12 @@ func update_hp():
 	$HitPoints/Label.text = "HP: " + str(hp)
 
 func update_fuel(amt):
-	fuel += amt
+	if fuel + amt < 0:
+		fuel = 0
+	elif fuel + amt > fuel_max:
+		fuel = fuel_max
+	else:
+		fuel += amt
 	$Fuel/Label.text = "FUEL: " + str(fuel)
 
 func update_current_player(var value):

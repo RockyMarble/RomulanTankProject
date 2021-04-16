@@ -41,6 +41,8 @@ func iterate_player():
 	player = player_list.get_child(current_player)
 	player.update_current_player(true)
 	
+	player.update_fuel(100)
+	
 	weapon_list.select(player.get_current_weapon())
 
 #Calls shoot function in the player then iterates thru the player
