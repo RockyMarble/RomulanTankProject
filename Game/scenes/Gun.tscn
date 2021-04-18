@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Script/Gun.gd" type="Script" id=1]
 [ext_resource path="res://images/Tanks/TankBarrelGreen.png" type="Texture" id=2]
@@ -9,14 +9,14 @@
 max_value = 100.0
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.677215, 100 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=11]
+[sub_resource type="CurveTexture" id=2]
 curve = SubResource( 1 )
 
-[sub_resource type="Curve" id=12]
+[sub_resource type="Curve" id=3]
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=13]
-curve = SubResource( 12 )
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
 
 [sub_resource type="ParticlesMaterial" id=5]
 flag_disable_z = true
@@ -24,9 +24,9 @@ gravity = Vector3( 0, 0, 0 )
 initial_velocity = 100.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-damping_curve = SubResource( 11 )
+damping_curve = SubResource( 2 )
 scale = 0.6
-scale_curve = SubResource( 13 )
+scale_curve = SubResource( 4 )
 
 [sub_resource type="Curve" id=6]
 max_value = 100.0
@@ -56,6 +56,15 @@ damping_curve = SubResource( 7 )
 angle = -90.0
 scale = 0.1
 scale_curve = SubResource( 9 )
+
+[sub_resource type="ParticlesMaterial" id=11]
+flag_disable_z = true
+spread = 0.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 355.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 4.0
 
 [node name="Gun" type="Node2D" groups=[
 "Gun",
@@ -108,3 +117,10 @@ texture = ExtResource( 3 )
 [node name="LaserTimer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 99.5648, 1.14255 )
+amount = 20
+lifetime = 5.0
+local_coords = false
+process_material = SubResource( 11 )
