@@ -20,7 +20,7 @@
 [ext_resource path="res://images/Tanks/TankBarrelRed.PNG" type="Texture" id=18]
 [ext_resource path="res://images/Projectile/White.PNG" type="Texture" id=19]
 
-[sub_resource type="PhysicsMaterial" id=4]
+[sub_resource type="PhysicsMaterial" id=1]
 friction = 0.6
 absorbent = true
 
@@ -50,43 +50,43 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="Curve" id=1]
+[sub_resource type="Curve" id=4]
 max_value = 100.0
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.677215, 100 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=11]
-curve = SubResource( 1 )
+[sub_resource type="CurveTexture" id=5]
+curve = SubResource( 4 )
 
-[sub_resource type="Curve" id=12]
+[sub_resource type="Curve" id=6]
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=13]
-curve = SubResource( 12 )
+[sub_resource type="CurveTexture" id=7]
+curve = SubResource( 6 )
 
-[sub_resource type="ParticlesMaterial" id=5]
+[sub_resource type="ParticlesMaterial" id=8]
 flag_disable_z = true
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 100.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-damping_curve = SubResource( 11 )
+damping_curve = SubResource( 5 )
 scale = 0.6
-scale_curve = SubResource( 13 )
+scale_curve = SubResource( 7 )
 
-[sub_resource type="Curve" id=6]
+[sub_resource type="Curve" id=9]
 max_value = 100.0
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.981013, 92.0455 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=7]
-curve = SubResource( 6 )
+[sub_resource type="CurveTexture" id=10]
+curve = SubResource( 9 )
 
-[sub_resource type="Curve" id=8]
+[sub_resource type="Curve" id=11]
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.987342, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=9]
-curve = SubResource( 8 )
+[sub_resource type="CurveTexture" id=12]
+curve = SubResource( 11 )
 
-[sub_resource type="ParticlesMaterial" id=10]
+[sub_resource type="ParticlesMaterial" id=13]
 lifetime_randomness = 0.1
 flag_disable_z = true
 gravity = Vector3( 0, 0, 0 )
@@ -97,10 +97,10 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 damping = 70.0
 damping_random = 0.1
-damping_curve = SubResource( 7 )
+damping_curve = SubResource( 10 )
 angle = -90.0
 scale = 0.1
-scale_curve = SubResource( 9 )
+scale_curve = SubResource( 12 )
 
 [node name="Level" type="Node2D"]
 
@@ -133,7 +133,7 @@ position = Vector2( 598.316, 373.958 )
 collision_layer = 2
 collision_mask = 3
 mass = 0.5
-physics_material_override = SubResource( 4 )
+physics_material_override = SubResource( 1 )
 gravity_scale = 6.0
 contacts_reported = 10
 contact_monitor = true
@@ -243,7 +243,7 @@ position = Vector2( -668.229, 373.008 )
 collision_layer = 2
 collision_mask = 3
 mass = 0.5
-physics_material_override = SubResource( 4 )
+physics_material_override = SubResource( 1 )
 gravity_scale = 6.0
 contacts_reported = 10
 contact_monitor = true
@@ -287,7 +287,7 @@ lifetime = 0.6
 one_shot = true
 explosiveness = 0.9
 randomness = 0.3
-process_material = SubResource( 5 )
+process_material = SubResource( 8 )
 texture = ExtResource( 19 )
 
 [node name="LaserParticle" type="Particles2D" parent="Camera2D/PlayerList/Player2/Gun"]
@@ -296,7 +296,7 @@ emitting = false
 amount = 30
 one_shot = true
 explosiveness = 0.9
-process_material = SubResource( 10 )
+process_material = SubResource( 13 )
 texture = ExtResource( 16 )
 
 [node name="LaserTimer" type="Timer" parent="Camera2D/PlayerList/Player2/Gun"]
