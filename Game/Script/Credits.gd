@@ -73,6 +73,7 @@ var credits = [
 		"https://www.audacityteam.org/"
 	],[
 		"Special thanks",
+		"",
 		"Dr. Ted Lehr",
 		"- for <insert reason here>",
 		"",
@@ -125,8 +126,6 @@ func _process(delta):
 func finish():
 	if not finished:
 		finished = true
-		# NOTE: This is called when the credits finish
-		# - Hook up your code to return to the relevant scene here, eg...
 		get_tree().change_scene("res://scenes/TitleScreen.tscn")
 
 
