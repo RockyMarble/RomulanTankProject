@@ -64,9 +64,9 @@ custom_constants/separation = 30
 alignment = 1
 
 [node name="Start_Game" type="Button" parent="Body/Center/ButtonBox"]
-margin_top = 99.0
+margin_top = 64.0
 margin_right = 173.0
-margin_bottom = 140.0
+margin_bottom = 105.0
 hint_tooltip = "What are you waiting for, Soldier!?"
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 0
@@ -76,10 +76,24 @@ flat = true
 expand_icon = true
 script = ExtResource( 6 )
 
+[node name="Credits" type="Button" parent="Body/Center/ButtonBox"]
+margin_top = 135.0
+margin_right = 116.0
+margin_bottom = 176.0
+hint_tooltip = "
+"
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+custom_fonts/font = ExtResource( 3 )
+text = "Credits"
+flat = true
+expand_icon = true
+script = ExtResource( 5 )
+
 [node name="Exit" type="Button" parent="Body/Center/ButtonBox"]
-margin_top = 170.0
+margin_top = 206.0
 margin_right = 67.0
-margin_bottom = 211.0
+margin_bottom = 247.0
 hint_tooltip = "
 "
 mouse_default_cursor_shape = 2
@@ -104,4 +118,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="Body/Center/ButtonBox/Start_Game" to="Body/Center/ButtonBox/Start_Game" method="_on_Start_Game_pressed"]
+[connection signal="pressed" from="Body/Center/ButtonBox/Credits" to="Body/Center/ButtonBox/Start_Game" method="_on_Credits_pressed"]
 [connection signal="pressed" from="Body/Center/ButtonBox/Exit" to="Body/Center/ButtonBox/Exit" method="_on_Exit_pressed"]
