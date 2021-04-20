@@ -57,7 +57,6 @@ func rotate_right():
 	$Gun.rotation_degrees += 1
 
 func update_hp():
-	
 	$HitPoints/Label.text = "HP: " + str(hp)
 	$HitPoints.run_resize(hp,hp_max)
 	
@@ -69,6 +68,7 @@ func update_fuel(amt):
 	else:
 		fuel += amt
 	$Fuel/Label.text = "FUEL: " + str(fuel)
+	$Fuel.run_resize(fuel,fuel_max)
 
 func update_current_player(var value):
 	$CurrentPlayer.visible = value
