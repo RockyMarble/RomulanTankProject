@@ -1,9 +1,9 @@
 extends Node2D
 
-const section_time := 2.0
+const section_time := 12.0
 const line_time := 0.3
-const base_speed := 60
-const speed_up_multiplier := 8.0
+const base_speed := 50
+const speed_up_multiplier := 3.0
 const title_color := Color.blueviolet
 
 var scroll_speed := base_speed
@@ -24,67 +24,224 @@ var credits = [
 	[
 		"TANKS",
 		"",
-		"by the Romulan Tank Project"
+		"",
+		"",
+		"",
+		"A Romulan Tank Project production",
+		"",
+		"",
+		"",
+		""
 	],[
-		"Programming",
+		"",
+		"-Programming-",
+		"",
+		"",
+		"",
 		"",
 		"Nat Arney",
-		"Adrian Lamphier",
-		"Benjamin Marble",
-		"Alexander Wilems"
-	],[
-		"Level Design",
 		"",
-		"Nat Arney"
-	],[
-		"Art",
-		"",
-		"Alexander Wilems"
-	],[
-		"Music",
-		"",
-		"Benjamin Marble",
-		"Adrian Lamphier"
-	],[
-		"Sound Effects",
-		"",
-		"Benjamin Marble"
-	],[
-		"Testers",
 		"",
 		"Adrian Lamphier",
+		"",
+		"",
+		"Benjamin Marble",
+		"",
+		"",
 		"Alexander Wilems",
-		"Benjamin Marble",
-		"Nat Arney"
-	],[
-		"Tools used",
 		"",
-		"Gane developed with the Godot Engine",
+		"",
+		""
+	],[
+		"",
+		"-Level Design-",
+		"",
+		"",
+		"",
+		"",
+		"Nat Arney",
+		"",
+		"",
+		""
+	],[
+		"",
+		"-Art-",
+		"",
+		"",
+		"",
+		"",
+		"Alexander Wilems",
+		"",
+		"",
+		""
+	],[
+		"",
+		"-Music-",
+		"",
+		"",
+		"",
+		"",
+		"Benjamin Marble",
+		"",
+		"",
+		"Adrian Lamphier",
+		"",
+		"",
+		""
+	],[
+		"",
+		"-Sound Effects-",
+		"",
+		"",
+		"",
+		"",
+		"Benjamin Marble",
+		"",
+		"",
+		""
+	],[
+		"",
+		"-Testers-",
+		"",
+		"",
+		"",
+		"",
+		"Adrian Lamphier",
+		"",
+		"",
+		"Alexander Wilems",
+		"",
+		"",
+		"Benjamin Marble",
+		"",
+		"",
+		"Nat Arney",
+		"",
+		"",
+		""
+	],[
+		"",
+		"-Tools used-",
+		"",
+		"",
+		"",
+		"",
+		"Game developed with the Godot Engine",
+		"",
+		"",
 		"https://godotengine.org/license",
 		"",
+		"",
+		"",
 		"Art created with Adobe Fresco and Photoshop",
+		"",
+		"",
 		"https://www.adobe.com/products/fresco.html",
+		"",
 		"https://www.adobe.com/products/photoshop.html",
 		"",
+		"",
+		"",
 		"Music created with FL studio 9 and FL studio 20",
+		"",
+		"",
 		"https://www.image-line.com/",
 		"",
+		"",
+		"",
 		"Sound effects made with Audacity",
-		"https://www.audacityteam.org/"
+		"",
+		"",
+		"https://www.audacityteam.org/",
+		"",
+		"",
+		"",
+		""
 	],[
-		"Special thanks",
+		"",
+		"-Special thanks-",
+		"",
+		"",
+		"",
 		"",
 		"Dr. Ted Lehr",
+		"",
+		"",
 		"- for <insert reason here>",
 		"",
+		"",
+		"",
 		"Russell Hernandez Ruiz",
+		"",
+		"",
 		"- for all the free playtesting and smiles",
 		"",
+		"",
+		"",
 		"Tanks2 and FreeOnlineGames",
+		"",
+		"",
 		"- for the inspiration and nostalgia",
 		"",
+		"",
+		"",
 		"Zapsplat.com",
+		"",
+		"",
 		"- for the limitless sfx possibilities on a student budget",
+		"",
+		"",
+		"",
+		"",
+		""
+	],[
+		"",
+		"",
+		"Fictitious Disclaimer:",
+		"",
+		"",
+		"",
+		"",
+		"This video game is protected under the copyright laws of the United States and other countries throughout the world",
+		"",
+		"",
+		"",
+		"Country of first publication: United States of America",
+		"",
+		"",
+		"",
+		"Any unauthorized exhibition, distribution, or copying of this video game or any part thereof (including soundtrack) may result in civil liability and criminal prosecution",
+		"",
+		"",
+		"",
+		"The setting, weapons, tanks, and incidents portrayed in this production are fictitious",
+		"",
+		"",
+		"",
+		"No identification with actual pixels (living or deceased), places, structures, and items is intended or should be inferred",
+		"",
+		"",
+		"",
+		"No person or entity associated with this video game received payment or anything of value, or entered into any agreement, in connection with the depiction of tobacco products",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"No pixels were harmed in the making of this video game",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
 		""
 	]
 ]
@@ -126,6 +283,7 @@ func _process(delta):
 func finish():
 	if not finished:
 		finished = true
+		
 		get_tree().change_scene("res://scenes/TitleScreen.tscn")
 
 
