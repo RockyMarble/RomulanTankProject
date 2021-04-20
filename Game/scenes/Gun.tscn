@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Script/Gun.gd" type="Script" id=1]
 [ext_resource path="res://images/Tanks/TankBarrelGreen.png" type="Texture" id=2]
@@ -99,6 +99,18 @@ scale = 5.0
 scale_curve = SubResource( 17 )
 color_ramp = SubResource( 13 )
 
+[sub_resource type="ParticlesMaterial" id=19]
+emission_shape = 2
+emission_box_extents = Vector3( 1500, 1, 1 )
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 30.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 31.61
+color = Color( 1, 0, 0, 1 )
+
 [node name="Gun" type="Node2D" groups=[
 "Gun",
 ]]
@@ -172,3 +184,11 @@ process_material = SubResource( 18 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FlameArea"]
 position = Vector2( 98.2739, 3.46479 )
 polygon = PoolVector2Array( 2.54292, -2.61648, 163.183, -30.9647, 164.128, 29.5115 )
+
+[node name="LaserDust" type="Particles2D" parent="."]
+position = Vector2( 728.546, 2.87305 )
+emitting = false
+amount = 50
+lifetime = 2.0
+one_shot = true
+process_material = SubResource( 19 )

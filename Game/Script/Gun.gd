@@ -2,16 +2,17 @@ extends Node2D
 
 export var muzzle_velocity = 1000
 export var bullet_gravity = 750
-onready var smoke_particle := $SmokeParticle
+
 
 var laser_damage = 10
 var flame_damage = 25
 
+onready var smoke_particle := $SmokeParticle
 onready var laser_raycast := $LaserRaycast
 onready var laser_sprite := $laser
 onready var laser_timer := $LaserTimer
 onready var laser_particle := $LaserParticle
-
+onready var laser_dust := $LaserDust
 onready var flame_area := $FlameArea
 onready var flame_particle := $FlameParticle
 
@@ -42,6 +43,7 @@ func shoot_cluster():
 func shoot_laser():
 	laser_particle.emitting = true
 	laser_sprite.visible = true
+	laser_dust.emitting = true
 	laser_timer.start()
 	laser_raycast.force_raycast_update()
 	var body = laser_raycast.get_collider()
