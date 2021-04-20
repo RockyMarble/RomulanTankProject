@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Script/Credits.gd" type="Script" id=1]
+[ext_resource path="res://audio/TankMusicCredits.ogg" type="AudioStream" id=2]
 
 [node name="GodotCredits" type="Node2D"]
 script = ExtResource( 1 )
@@ -35,6 +36,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CreditsMusic" type="AudioStreamPlayer" parent="CreditsContainer/Line"]
-volume_db = -8.0
+[node name="CreditsMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -6.117
 autoplay = true
