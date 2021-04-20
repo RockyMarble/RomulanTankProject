@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/TankRigid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/PlayerController.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/KillFloor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://images/Backgrounds/DesertNight.png" type="Texture" id=4]
+
+[sub_resource type="PhysicsMaterial" id=1]
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=2]
+friction = 0.6
+absorbent = true
+
+[node name="Level" type="Node2D"]
+
+[node name="DesertNight" type="Sprite" parent="."]
+position = Vector2( 1011.99, 712.902 )
+scale = Vector2( 0.854853, 0.854853 )
+texture = ExtResource( 4 )
+
+[node name="Ground" type="StaticBody2D" parent="." groups=[
+"Floor",
+]]
+position = Vector2( 540.097, 1048.45 )
+scale = Vector2( 1.1, 1 )
+collision_layer = 3
+physics_material_override = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 20 )
+polygon = PoolVector2Array( -543.848, 11.993, -497.669, -14.9928, -438.712, 93.5068, -347.803, 119.507, -233.257, 87.5068, -140.53, 23.5068, -44.1664, -84.4932, 75.8336, -124.493, 234.015, -160.493, 390.379, -206.493, 438.781, -257.399, 458.517, -314.031, 461.949, -361.225, 676.254, -232.075, 802.786, -157.992, 944.093, -97.5557, 1051.77, -65.0288, 1199.41, -46.7407, 1284.55, -0.706177, 1378.35, 69.1395, 1411.54, 310.424, -545.291, 253.278 )
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="Ground"]
+color = Color( 0.490196, 0.490196, 0.490196, 1 )
+polygon = PoolVector2Array( -543.848, 11.993, -497.669, -14.9928, -438.712, 93.5068, -347.803, 119.507, -233.257, 87.5068, -140.53, 23.5068, -44.1664, -84.4932, 75.8336, -124.493, 234.015, -160.493, 390.379, -206.493, 438.781, -257.399, 458.517, -314.031, 461.949, -361.225, 676.254, -232.075, 802.786, -157.992, 944.093, -97.5557, 1051.77, -65.0288, 1199.41, -46.7407, 1284.55, -0.706177, 1378.35, 69.1395, 1392.66, 425.989, -538.09, 448.212 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1013.06, 844.582 )
+scale = Vector2( 2, 2 )
+current = true
+zoom = Vector2( 2, 2 )
+
+[node name="PlayerList" type="Node" parent="Camera2D" groups=[
+"PlayerList",
+]]
+
+[node name="Player1" parent="Camera2D/PlayerList" instance=ExtResource( 1 )]
+position = Vector2( 1732.56, 943.756 )
+physics_material_override = SubResource( 2 )
+
+[node name="Player2" parent="Camera2D/PlayerList" instance=ExtResource( 1 )]
+position = Vector2( 188.267, 1110.51 )
+physics_material_override = SubResource( 2 )
+
+[node name="PlayerController" parent="Camera2D" instance=ExtResource( 2 )]
+position = Vector2( -499.89, -287.511 )
+
+[node name="KillFloor" parent="." instance=ExtResource( 3 )]
+position = Vector2( -413.11, 4.89175 )
+scale = Vector2( 2, 2 )

@@ -1,9 +1,5 @@
 extends RigidBody2D
 
-onready var rng = RandomNumberGenerator.new()
-onready var colors = ["Blue","Green","Red","Yellow"]
-onready var color = "Blue"
-
 var left_vector = Vector2(-30, 0)
 var right_vector = Vector2(30, 0)
 var left_vector_slow = Vector2(-8,0)

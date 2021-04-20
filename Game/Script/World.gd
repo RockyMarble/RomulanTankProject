@@ -3,17 +3,19 @@ extends Node2D
 # World loads in levels dynamically
 # To keep track of current and next levels
 
-export var lvl_count = 3 # Editable in Scene Editor
+export var lvl_count = 5 # Editable in Scene Editor
 
 onready var lvl_num = 1
 onready var level = load("res://scenes/Levels/Level-" + str(lvl_num) + ".tscn").instance()
 
+# Initialize rng for tank colors
 onready var rng = RandomNumberGenerator.new()
 onready var colors = ["Blue","Green","Red","Yellow"]
 onready var temp_colors = colors.duplicate()
 onready var color = "Blue"
 
 # Add Level child (incl. Camera2D, PlayerController, PlayerList, and Ground)
+# Randomize tank colors
 # Iterate & prepare the next level
 func _ready():
 	add_child(level)
@@ -36,6 +38,7 @@ func _ready():
 # Else:
 # # Delete previous level
 # # Add new level
+# # Randomize tank colors
 # # Iterate levels
 # # # If a next level exists, load it
 func change_level():
