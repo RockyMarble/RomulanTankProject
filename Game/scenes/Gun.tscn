@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Script/Gun.gd" type="Script" id=1]
 [ext_resource path="res://images/Tanks/TankBarrelGreen.png" type="Texture" id=2]
@@ -66,6 +66,39 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 4.0
 
+[sub_resource type="Gradient" id=12]
+offsets = PoolRealArray( 0.00740741, 0.303704, 1 )
+colors = PoolColorArray( 0.634277, 0, 0, 1, 0.937174, 0.423828, 0.062912, 1, 0.864216, 0.916016, 0.135971, 1 )
+
+[sub_resource type="GradientTexture" id=13]
+gradient = SubResource( 12 )
+
+[sub_resource type="Curve" id=14]
+max_value = 100.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.512658, 100 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=15]
+curve = SubResource( 14 )
+
+[sub_resource type="Curve" id=16]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.123864 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=17]
+curve = SubResource( 16 )
+
+[sub_resource type="ParticlesMaterial" id=18]
+flag_disable_z = true
+spread = 15.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 150.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel_random = 1.0
+damping_curve = SubResource( 15 )
+scale = 5.0
+scale_curve = SubResource( 17 )
+color_ramp = SubResource( 13 )
+
 [node name="Gun" type="Node2D" groups=[
 "Gun",
 ]]
@@ -118,9 +151,24 @@ texture = ExtResource( 3 )
 wait_time = 0.2
 one_shot = true
 
-[node name="Particles2D" type="Particles2D" parent="."]
+[node name="ArcParticle" type="Particles2D" parent="."]
+visible = false
 position = Vector2( 99.5648, 1.14255 )
 amount = 20
 lifetime = 5.0
 local_coords = false
 process_material = SubResource( 11 )
+
+[node name="FlameParticle" type="Particles2D" parent="."]
+position = Vector2( 100.006, 0.793701 )
+emitting = false
+amount = 150
+lifetime = 1.5
+one_shot = true
+process_material = SubResource( 18 )
+
+[node name="FlameArea" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FlameArea"]
+position = Vector2( 98.2739, 3.46479 )
+polygon = PoolVector2Array( 2.54292, -2.61648, 163.183, -30.9647, 164.128, 29.5115 )

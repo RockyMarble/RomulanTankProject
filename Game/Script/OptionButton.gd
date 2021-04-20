@@ -5,4 +5,6 @@ extends OptionButton
 func _ready():
 	add_item("default")
 	add_item("cluster")
-	add_item("laser")
+	add_item("frickin laser")
+	add_item("mine")
+	add_item("flamethrower")

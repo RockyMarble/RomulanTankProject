@@ -70,6 +70,7 @@ func update_fuel(amt):
 
 func update_current_player(var value):
 	$CurrentPlayer.visible = value
+	$Gun/ArcParticle.visible = value
 
 func get_current_weapon():
 	return current_weapon
@@ -89,6 +90,10 @@ func shoot():
 		2:
 			gun.shoot_laser()
 			$SoundShootLaser.play()
+		3:
+			gun.shoot_mine()
+		4:
+			gun.shoot_flame()
 
 #damage calculations
 func take_damage(amount):
