@@ -57,8 +57,10 @@ func rotate_right():
 	$Gun.rotation_degrees += 1
 
 func update_hp():
+	
 	$HitPoints/Label.text = "HP: " + str(hp)
-
+	$HitPoints.run_resize(hp,hp_max)
+	
 func update_fuel(amt):
 	if fuel + amt < 0:
 		fuel = 0
