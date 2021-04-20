@@ -1,5 +1,8 @@
 extends RigidBody2D
 
+onready var rng = RandomNumberGenerator.new()
+onready var colors = ["Blue","Green","Red","Yellow"]
+onready var color = "Blue"
 
 var left_vector = Vector2(-30, 0)
 var right_vector = Vector2(30, 0)
@@ -116,3 +119,7 @@ func _on_RigidBody2D_body_shape_entered(body_id, body, body_shape, local_shape):
 func _on_RigidBody2D_body_shape_exited(body_id, body, body_shape, local_shape):
 	if str(body).begins_with("[Rigid"):
 		touching = false
+
+func change_tank_color(color):
+	get_node("Gun/gun").texture = load("res://images/Tanks/TankBarrel" + str(color) + ".png")
+	get_node("tank").texture = load("res://images/Tanks/symTank" + str(color) + ".png")
