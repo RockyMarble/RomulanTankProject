@@ -45,7 +45,8 @@ func change_level():
 	if lvl_num > lvl_count:
 		get_tree().change_scene("res://scenes/TitleScreen.tscn")
 	else: 
-		get_node("Level").free()
+		get_node("Level").set_name("old")
+		get_node("old").queue_free()
 		add_child(level)
 		
 		temp_colors = colors.duplicate()
@@ -61,3 +62,11 @@ func change_level():
 			level = load("res://scenes/Levels/Level-" + str(lvl_num) + ".tscn").instance()
 			
 
+func restart():
+	var current_level = load("res://scenes/Levels/Level-" + str(lvl_num -1) + ".tscn").instance()
+	var tank_colors = [get_node("Level/Camera2D/PlayerList/Player1").tank_color,get_node("Level/Camera2D/PlayerList/Player2").tank_color]
+	get_node("Level").set_name("old")
+	get_node("old").queue_free()
+	add_child(current_level)
+	get_node("Level/Camera2D/PlayerList/Player1").call("change_tank_color",tank_colors[0])
+	get_node("Level/Camera2D/PlayerList/Player2").call("change_tank_color",tank_colors[1])

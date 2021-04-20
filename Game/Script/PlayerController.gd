@@ -74,7 +74,6 @@ func pause():
 	paused = true
 	var menu = load("res://scenes/PauseMenu.tscn").instance()
 	add_child(menu)
-	print(get_children())
 
 #sets player weapon to the optionselect
 func _on_OptionButton_item_selected(index):

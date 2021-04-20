@@ -13,6 +13,7 @@ var current_weapon = 0
 var flipping = false
 var dead = false
 var touching = false
+var tank_color = "Green"
 
 signal death
 
@@ -126,3 +127,4 @@ func _on_RigidBody2D_body_shape_exited(body_id, body, body_shape, local_shape):
 func change_tank_color(color):
 	get_node("Gun/gun").texture = load("res://images/Tanks/TankBarrel" + str(color) + ".png")
 	get_node("tank").texture = load("res://images/Tanks/symTank" + str(color) + ".png")
+	tank_color = color
