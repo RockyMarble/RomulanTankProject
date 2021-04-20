@@ -9,23 +9,11 @@
 [ext_resource path="res://audio/tankShootHE2.wav" type="AudioStream" id=7]
 [ext_resource path="res://audio/tankShootHE1.wav" type="AudioStream" id=8]
 [ext_resource path="res://audio/tankShootEnergy2.wav" type="AudioStream" id=9]
+[ext_resource path="res://HitPoints.tscn" type="PackedScene" id=10]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.6
 absorbent = true
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.313726, 0.67451, 0.152941, 1 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color( 0, 0, 0, 1 )
-border_blend = true
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.47451, 0.447059, 0.737255, 1 )
@@ -68,33 +56,7 @@ rotation = 1.57079
 scale = Vector2( -0.995936, 1.15265 )
 polygon = PoolVector2Array( 26.5351, 32.4862, 41.6769, 19.7472, 42.0751, 0.122558, 25.8151, -14.5637, 2.00593, -72.3835, -16.102, -76.9991, -23.1775, -56.9488, -23.2732, 85.5077, -12.9129, 99.2794, 1.58448, 93.0425 )
 
-[node name="HitPoints" type="Panel" parent="."]
-margin_left = -87.0023
-margin_top = 41.3416
-margin_right = 84.9977
-margin_bottom = 61.3416
-custom_styles/panel = SubResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="HitPoints"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -7.0
-margin_right = 20.0
-margin_bottom = 7.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "HP: 100"
-align = 1
-valign = 1
-uppercase = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="HitPoints" parent="." instance=ExtResource( 10 )]
 
 [node name="Fuel" type="Panel" parent="."]
 margin_left = -87.0023

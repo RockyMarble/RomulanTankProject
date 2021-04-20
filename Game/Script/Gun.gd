@@ -15,6 +15,7 @@ onready var flame_area := $FlameArea
 onready var flame_particle := $FlameParticle
 onready var laser_dust := $LaserDust
 
+
 func _process(delta):
 	rotation_degrees = clamp(rotation_degrees, -180, 0)
 	if laser_timer.is_stopped():
