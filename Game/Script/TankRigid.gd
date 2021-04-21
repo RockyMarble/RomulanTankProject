@@ -31,6 +31,7 @@ func move_left():
 	if fuel > 0:
 		if !touching:
 			apply_central_impulse(left_vector)
+			$DirtParticles.throw_dirt()
 			update_fuel(-1)
 		else:
 			apply_central_impulse(left_vector_slow)
@@ -40,6 +41,7 @@ func move_right():
 	if fuel > 0:
 		if !touching:
 			apply_central_impulse(right_vector)
+			$DirtParticles.throw_dirt()
 			update_fuel(-1)
 		else:
 			apply_central_impulse(right_vector_slow)
