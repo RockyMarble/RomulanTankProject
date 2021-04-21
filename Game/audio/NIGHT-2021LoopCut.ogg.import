@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/NIGHT-2021LoopCut.ogg-f5a564a7e6fb7ca42f6776f594ebb84c.oggstr"
+
+[deps]
+
+source_file="res://audio/NIGHT-2021LoopCut.ogg"
+dest_files=[ "res://.import/NIGHT-2021LoopCut.ogg-f5a564a7e6fb7ca42f6776f594ebb84c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
