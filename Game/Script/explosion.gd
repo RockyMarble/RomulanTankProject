@@ -1,12 +1,13 @@
 extends Area2D
 
 var explosion_damage = 10
-var explosion_life = .5
+var explosion_life = 1
 
 onready var timer := $Timer
 
 #time for animation
 func _ready():
+	$Particles2D.emitting = true
 	$SoundCannonExplosion.play()
 	timer.start(explosion_life)
 

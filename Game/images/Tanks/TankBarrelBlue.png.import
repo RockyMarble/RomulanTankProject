@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TankBodyYellow.PNG-113a32a44ac49a3c15b168f99fb3d412.stex"
+path="res://.import/TankBarrelBlue.png-7ef25af01667b3b00dd7ee0376c916d6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Tanks/TankBodyYellow.PNG"
-dest_files=[ "res://.import/TankBodyYellow.PNG-113a32a44ac49a3c15b168f99fb3d412.stex" ]
+source_file="res://images/Tanks/TankBarrelBlue.png"
+dest_files=[ "res://.import/TankBarrelBlue.png-7ef25af01667b3b00dd7ee0376c916d6.stex" ]
 
 [params]
 

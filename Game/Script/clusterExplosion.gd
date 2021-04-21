@@ -8,6 +8,7 @@ onready var timer := $Timer
 #time for animation
 func _ready():
 	$SoundClusterExplosion.play()
+	$Particles2D.emitting = true
 	timer.start(explosion_life)
 
 #searches the overlapping bodies for players to do damage calculation
