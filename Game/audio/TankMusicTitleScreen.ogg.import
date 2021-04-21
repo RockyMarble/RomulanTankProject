@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/TankMusicTitleScreen.ogg-86d8c8c13bfb6f6ec353752dbfd94019.oggstr"
+
+[deps]
+
+source_file="res://audio/TankMusicTitleScreen.ogg"
+dest_files=[ "res://.import/TankMusicTitleScreen.ogg-86d8c8c13bfb6f6ec353752dbfd94019.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

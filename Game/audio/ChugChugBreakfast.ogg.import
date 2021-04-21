@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ChugChugBreakfast.ogg-819c19aa0e08fdaa152cd557108f3138.oggstr"
+
+[deps]
+
+source_file="res://audio/ChugChugBreakfast.ogg"
+dest_files=[ "res://.import/ChugChugBreakfast.ogg-819c19aa0e08fdaa152cd557108f3138.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

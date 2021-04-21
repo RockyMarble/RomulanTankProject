@@ -28,7 +28,7 @@ func _ready():
 	color = temp_colors[rng.randi_range(0,2)]
 	get_node("Level/Camera2D/PlayerList/Player2").call("change_tank_color",color)
 	
-	
+	$MusicNode/MusicLevel1.play()
 	lvl_num += 1
 	level = load("res://scenes/Levels/Level-" + str(lvl_num) + ".tscn").instance()
 
@@ -43,8 +43,20 @@ func _ready():
 # # # If a next level exists, load it
 func change_level():
 	if lvl_num > lvl_count:
+		$MusicNode/MusicLevel5.stop()
 		get_tree().change_scene("res://scenes/TitleScreen.tscn")
 	else: 
+		match lvl_num-1:
+			1:
+				$MusicNode/MusicLevel1.stop()
+			2:
+				$MusicNode/MusicLevel2.stop()
+			3:
+				$MusicNode/MusicLevel3.stop()
+			4:
+				$MusicNode/MusicLevel4.stop()
+			#5:
+				#$MusicNode/MusicLevel5.stop()
 		get_node("Level").set_name("old")
 		get_node("old").queue_free()
 		add_child(level)
@@ -59,8 +71,19 @@ func change_level():
 		
 		lvl_num += 1
 		if lvl_num <= lvl_count:
+			match lvl_num-1:
+				2:
+					$MusicNode/MusicLevel2.play()
+				3:
+					$MusicNode/MusicLevel3.play()
+				4:
+					$MusicNode/MusicLevel4.play()
+				#5:
+					#$MusicNode/MusicLevel5.play()
 			level = load("res://scenes/Levels/Level-" + str(lvl_num) + ".tscn").instance()
-			
+		if lvl_num > lvl_count:
+			$MusicNode/MusicLevel5.play()
+
 
 func restart():
 	var current_level = load("res://scenes/Levels/Level-" + str(lvl_num -1) + ".tscn").instance()
