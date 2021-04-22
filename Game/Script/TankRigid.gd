@@ -97,8 +97,10 @@ func shoot():
 			$SoundShootLaser.play()
 		3:
 			gun.shoot_mine()
+			$SoundShootMine.play()
 		4:
 			gun.shoot_flame()
+			$SoundShootFlamethrower.play()
 
 #damage calculations
 func take_damage(amount):

@@ -38,7 +38,6 @@ texture = ExtResource( 1 )
 [node name="Particles2D" type="Particles2D" parent="Black"]
 position = Vector2( 0.905762, 0.77637 )
 amount = 60
-visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 process_material = SubResource( 4 )
 

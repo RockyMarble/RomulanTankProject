@@ -6,21 +6,21 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 6.1402
 
-[sub_resource type="Gradient" id=3]
+[sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0.0185185, 1 )
 colors = PoolColorArray( 1, 0, 0, 1, 0.96875, 1, 0, 1 )
 
-[sub_resource type="GradientTexture" id=4]
-gradient = SubResource( 3 )
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
 
-[sub_resource type="ParticlesMaterial" id=2]
+[sub_resource type="ParticlesMaterial" id=4]
 emission_shape = 1
 emission_sphere_radius = 1.0
 flag_disable_z = true
 gravity = Vector3( 0, -25, 0 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-color_ramp = SubResource( 4 )
+color_ramp = SubResource( 3 )
 
 [node name="RigidBody2D" type="RigidBody2D"]
 mass = 0.1
@@ -40,4 +40,4 @@ one_shot = true
 [node name="Particles2D" type="Particles2D" parent="."]
 amount = 30
 local_coords = false
-process_material = SubResource( 2 )
+process_material = SubResource( 4 )
