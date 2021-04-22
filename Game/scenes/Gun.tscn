@@ -192,7 +192,7 @@ process_material = SubResource( 13 )
 position = Vector2( 100.006, 0.793701 )
 emitting = false
 amount = 140
-lifetime = 1.5
+lifetime = 2.5
 one_shot = true
 process_material = SubResource( 20 )
 

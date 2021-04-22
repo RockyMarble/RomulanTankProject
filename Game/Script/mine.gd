@@ -6,6 +6,7 @@ onready var arming_timer := $ArmingTimer
 
 func _ready():
 	arming_timer.start()
+	$SoundMineArm.play()
 
 func _process(delta):
 	if !sleeping and arming_timer.is_stopped():
