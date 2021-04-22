@@ -5,4 +5,5 @@ extends Button
 
 
 func _on_Start_Game_pressed():
+	$SoundMenu1.play()
 	get_tree().change_scene("res://scenes/World.tscn")
