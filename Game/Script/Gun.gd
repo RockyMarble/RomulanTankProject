@@ -3,8 +3,8 @@ extends Node2D
 export var muzzle_velocity = 1000
 export var bullet_gravity = 750
 
-var laser_damage = 10
-var flame_damage = 25
+var laser_damage = 12
+var flame_damage = 30
 
 onready var laser_raycast := $LaserRaycast
 onready var laser_sprite := $laser

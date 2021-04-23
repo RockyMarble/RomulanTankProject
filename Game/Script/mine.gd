@@ -15,6 +15,6 @@ func _process(delta):
 func explode():
 	var explosion_instance = explosion.instance()
 	explosion_instance.position = self.position
-	explosion_instance.explosion_damage = 20
+	explosion_instance.explosion_damage = 22
 	get_parent().add_child(explosion_instance)
 	queue_free()
