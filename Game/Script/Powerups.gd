@@ -1,10 +1,9 @@
 extends Node2D
 
 const MIN_ROUNDS = 2
-const MAX_ROUNDS = 10
+const MAX_ROUNDS = 5
 const MIN_HP_UP = 10
 const MAX_HP_UP = 50
-var rounds = 0
 var rng = RandomNumberGenerator.new()
 var p_player
 

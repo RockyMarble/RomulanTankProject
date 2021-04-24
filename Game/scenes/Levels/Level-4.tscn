@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/PlayerListTwo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/Backgrounds/DesertDay.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Items.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/KillFloor.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/PlayerController.tscn" type="PackedScene" id=17]
 
@@ -50,4 +51,26 @@ position = Vector2( -506.488, -304.901 )
 position = Vector2( -1458.75, -787.812 )
 scale = Vector2( 2, 2 )
 
+[node name="Items" parent="." instance=ExtResource( 3 )]
+
+[node name="Item1" parent="Items" index="0"]
+position = Vector2( 170.925, 228.629 )
+rotation = 0.13439
+
+[node name="Item2" parent="Items" index="1"]
+position = Vector2( -960.366, 322.193 )
+rotation = -0.13439
+
+[node name="Item3" parent="Items" index="2"]
+position = Vector2( 760.366, 204.775 )
+
+[node name="Item4" parent="Items" index="3"]
+position = Vector2( 984.953, 25.5443 )
+rotation = -0.338594
+
+[node name="Item5" parent="Items" index="4"]
+position = Vector2( -114.829, 309.711 )
+
 [editable path="Camera2D/PlayerList"]
+
+[editable path="Items"]

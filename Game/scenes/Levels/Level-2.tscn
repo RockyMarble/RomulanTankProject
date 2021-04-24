@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://images/Backgrounds/DesertNight.png" type="Texture" id=1]
 [ext_resource path="res://scenes/KillFloor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/TankRigid.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/PlayerController.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Items.tscn" type="PackedScene" id=5]
 
 [sub_resource type="PhysicsMaterial" id=1]
 absorbent = true
@@ -62,3 +63,23 @@ position = Vector2( -499.89, -287.511 )
 [node name="KillFloor" parent="." instance=ExtResource( 2 )]
 position = Vector2( -413.11, 4.89175 )
 scale = Vector2( 2, 2 )
+
+[node name="Items" parent="." instance=ExtResource( 5 )]
+modulate = Color( 0.454902, 0.486275, 0.533333, 1 )
+
+[node name="Item1" parent="Items" index="0"]
+position = Vector2( 868.41, 1159.52 )
+
+[node name="Item2" parent="Items" index="1"]
+position = Vector2( 1169.7, 1162.01 )
+
+[node name="Item3" parent="Items" index="2"]
+position = Vector2( 1025.46, 1151.59 )
+
+[node name="Item4" parent="Items" index="3"]
+position = Vector2( 1093.32, 1138.92 )
+
+[node name="Item5" parent="Items" index="4"]
+position = Vector2( 948.898, 1141.53 )
+
+[editable path="Items"]

@@ -98,10 +98,10 @@ func powerup_check():
 			num = 19
 			if num > 18:
 				Powerups.choose_powerup(self)
+				return true
+	return false
 					
 func update_current_player(var value):
-	if value:
-		powerup_check()
 	$CurrentPlayer.visible = value
 	$Gun/ArcParticle.visible = value
 
