@@ -28,15 +28,18 @@ func _ready():
 	color = temp_colors[rng.randi_range(0,2)]
 	get_node("Level/Camera2D/PlayerList/Player2").call("change_tank_color",color)
 	
-	rng.randomize()
-	for item in $Level/Items.get_children():
-		if rng.randi_range(0,1) == 1:
-			item.visible = true
-			item.monitoring = true
+	init_items()
 	
 	$MusicNode/MusicLevel1.play()
 	lvl_num += 1
 	level = load("res://scenes/Levels/Level-" + str(lvl_num) + ".tscn").instance()
+
+func init_items():
+	rng.randomize()
+	for item in $Level/Items.get_children():
+		if rng.randi_range(0,1) == 0:
+			item.visible = false
+			item.monitoring = false
 
 # Check for end of levels
 # If end:
@@ -75,6 +78,8 @@ func change_level():
 		color = temp_colors[rng.randi_range(0,2)]
 		get_node("Level/Camera2D/PlayerList/Player2").call("change_tank_color",color)
 		
+		init_items()
+		
 		lvl_num += 1
 		if lvl_num <= lvl_count:
 			match lvl_num-1:
@@ -99,3 +104,4 @@ func restart():
 	add_child(current_level)
 	get_node("Level/Camera2D/PlayerList/Player1").call("change_tank_color",tank_colors[0])
 	get_node("Level/Camera2D/PlayerList/Player2").call("change_tank_color",tank_colors[1])
+	init_items()
