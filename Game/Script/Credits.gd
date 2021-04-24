@@ -2,7 +2,7 @@ extends Node2D
 
 const section_time := 12.0
 const line_time := 0.3
-const base_speed := 50
+const base_speed := 50.0
 const speed_up_multiplier := 3.0
 const title_color := Color.blueviolet
 
@@ -437,7 +437,7 @@ var credits = [
 
 
 func _process(delta):
-	var scroll_speed = base_speed * delta
+	scroll_speed = base_speed * delta
 	
 	if section_next:
 		section_timer += delta * speed_up_multiplier if speed_up else delta
