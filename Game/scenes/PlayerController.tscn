@@ -115,3 +115,4 @@ pitch_scale = 0.64
 [connection signal="button_down" from="ButtonList/Minus" to="." method="_on_Minus_button_down"]
 [connection signal="button_up" from="ButtonList/Minus" to="." method="_on_Minus_button_up"]
 [connection signal="item_selected" from="OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="timeout" from="TimeBetweenPlayer" to="." method="_on_TimeBetweenPlayer_timeout"]

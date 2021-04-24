@@ -32,7 +32,6 @@ func _process(_delta):
 #sets the icon ,indicating which player turn it is, to on or off
 #Then sets the current weapon of that player to the optionlist
 func iterate_player():
-	$TimeBetweenPlayer.start()
 	current_player += 1
 	if current_player >= len(get_tree().get_nodes_in_group("Player")):
 		current_player = 0
@@ -50,7 +49,7 @@ func _on_SHOOT_pressed():
 	if not paused and $TimeBetweenPlayer.is_stopped():
 		player.shoot()
 		#$SoundPlayerShoot.play()
-		iterate_player()
+		$TimeBetweenPlayer.start()
 
 #detects for inputs
 func get_button_input():
@@ -124,3 +123,6 @@ func _on_Plus_button_up():
 func _on_Minus_button_up():
 	#if not paused and $TimeBetweenPlayer.is_stopped():
 		$SoundMoveTurret.stop()
+
+func _on_TimeBetweenPlayer_timeout():
+	iterate_player()

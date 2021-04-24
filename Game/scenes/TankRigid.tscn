@@ -90,7 +90,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0.537255, 0, 0 ), Color( 1, 0.537255, 0, 1 ), Color( 1, 0.537255, 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=10]
 resource_name = "ShieldDown"
 length = 2.0
 tracks/0/type = "value"
@@ -106,8 +106,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0.537255, 0, 0 ), Color( 1, 0.537255, 0, 1 ), Color( 1, 0.537255, 0, 0 ), Color( 1, 0.537255, 0, 1 ), Color( 1, 0.537255, 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=10]
-resource_name = "Speed"
+[sub_resource type="Animation" id=11]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Powerup:color")
@@ -228,8 +227,8 @@ script = ExtResource( 12 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Health = SubResource( 8 )
 anims/Shield = SubResource( 9 )
-anims/ShieldDown = SubResource( 11 )
-anims/Speed = SubResource( 10 )
+anims/ShieldDown = SubResource( 10 )
+anims/Speed = SubResource( 11 )
 anims/SpeedDown = SubResource( 12 )
 
 [node name="Powerup" type="ColorRect" parent="."]
