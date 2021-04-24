@@ -1,9 +1,9 @@
 extends RigidBody2D
 
+var normal_speed_max = 100
+var slow_speed_max = 50
 var left_vector = Vector2(-30, 0)
 var right_vector = Vector2(30, 0)
-var left_vector_slow = Vector2(-8,0)
-var right_vector_slow = Vector2(8,0)
 var hp = 100
 var hp_max = 100
 var fuel = 300
@@ -13,7 +13,11 @@ var current_weapon = 0
 var flipping = false
 var dead = false
 var touching = false
+
+var rng = RandomNumberGenerator.new()
 var tank_color = "Green"
+var powerup = 0
+var rounds = 0
 
 signal death
 
@@ -23,7 +27,12 @@ func _integrate_forces(state):
 	keep_upright()
 
 func _physics_process(delta):
-	linear_velocity.x = clamp(linear_velocity.x, -100, 100)
+	var speed = normal_speed_max
+	if touching:
+		speed = slow_speed_max
+	if powerup == 3: # Speedup
+		speed += 50
+	linear_velocity.x = clamp(linear_velocity.x, -speed, speed)
 	
 
 
@@ -34,7 +43,7 @@ func move_left():
 			$DirtParticles.throw_dirt()
 			update_fuel(-1)
 		else:
-			apply_central_impulse(left_vector_slow)
+			apply_central_impulse(left_vector)
 			update_fuel(-2)
 
 func move_right():
@@ -44,7 +53,7 @@ func move_right():
 			$DirtParticles.throw_dirt()
 			update_fuel(-1)
 		else:
-			apply_central_impulse(right_vector_slow)
+			apply_central_impulse(right_vector)
 			update_fuel(-2)
 
 func keep_upright():
@@ -73,7 +82,26 @@ func update_fuel(amt):
 	$Fuel/Label.text = "FUEL: " + str(fuel)
 	$Fuel.run_resize(fuel,fuel_max)
 
+func powerup_check():
+	if rounds > 0:
+		rounds -= 1
+	else:
+		if powerup > 0:
+			if powerup == 2:
+				$AnimationPlayer.play("ShieldDown")
+			elif powerup == 3:
+				$AnimationPlayer.play("SpeedDown")
+			powerup = 0
+		else:
+			rng.randomize()
+			var num = rng.randi_range(1,20)
+			num = 19
+			if num > 18:
+				Powerups.choose_powerup(self)
+					
 func update_current_player(var value):
+	if value:
+		powerup_check()
 	$CurrentPlayer.visible = value
 	$Gun/ArcParticle.visible = value
 
@@ -102,8 +130,11 @@ func shoot():
 			gun.shoot_flame()
 			$SoundShootFlamethrower.play()
 
-#damage calculations
+# Damage calculations
 func take_damage(amount):
+	if powerup == 2 and amount > 0: # Shield
+		amount = amount / 2
+		
 	hp -= amount
 	update_hp()
 	$SoundPlayerTakeDamage.play()
