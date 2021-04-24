@@ -28,6 +28,12 @@ func _ready():
 	color = temp_colors[rng.randi_range(0,2)]
 	get_node("Level/Camera2D/PlayerList/Player2").call("change_tank_color",color)
 	
+	rng.randomize()
+	for item in $Level/Items.get_children():
+		if rng.randi_range(0,1) == 1:
+			item.visible = true
+			item.monitoring = true
+	
 	$MusicNode/MusicLevel1.play()
 	lvl_num += 1
 	level = load("res://scenes/Levels/Level-" + str(lvl_num) + ".tscn").instance()
