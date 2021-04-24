@@ -18,7 +18,7 @@ func _process(delta):
 
 
 #on hitting an object, it spawns bombs that are applied a random force between an interval
-func _on_Node2D_body_entered(body):
+func _on_Node2D_body_entered(_body):
 	velocity.x = 0
 	velocity.y = 0
 	bullet_gravity = 0
@@ -36,5 +36,5 @@ func spawn_bomb():
 	angle.y = rng.randf_range(-300, -200)
 	var bomb_instance = bomb.instance()
 	bomb_instance.position = self.position
-	get_parent().add_child(bomb_instance)
-	bomb_instance.apply_central_impulse(angle)
+	get_parent().call_deferred("add_child",bomb_instance)
+	bomb_instance.call_deferred("apply_central_impulse",angle)

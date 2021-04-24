@@ -20,4 +20,8 @@ func _on_Item_body_entered(body):
 	if str(body).begins_with("[Rigid"):
 		if body.powerup_check() == true:
 			visible = false
-			monitoring = false
+			set_deferred("monitoring", false)
+
+func _on_Item_area_entered(_area):
+	visible = false
+	set_deferred("monitoring", false)

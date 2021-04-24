@@ -23,10 +23,10 @@ signal death
 
 onready var gun := $Gun
 
-func _integrate_forces(state):
+func _integrate_forces(_state):
 	keep_upright()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var speed = normal_speed_max
 	if touching:
 		speed = slow_speed_max
@@ -150,12 +150,12 @@ func die():
 	emit_signal("death") # Sent to PlayerController object to tally death count
 
 
-func _on_RigidBody2D_body_shape_entered(body_id, body, body_shape, local_shape):
+func _on_RigidBody2D_body_shape_entered(_body_id, body, _body_shape, _local_shape):
 	if str(body).begins_with("[Rigid"):
 		touching = true
 
 
-func _on_RigidBody2D_body_shape_exited(body_id, body, body_shape, local_shape):
+func _on_RigidBody2D_body_shape_exited(_body_id, body, _body_shape, _local_shape):
 	if str(body).begins_with("[Rigid"):
 		touching = false
 

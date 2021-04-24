@@ -9,7 +9,7 @@ func _ready():
 	controller = get_parent()
 	scene_reset = controller.get_owner().get_filename()
 
-func _process(delta):
+func _process(_delta):
 	get_button_input()
 
 func get_button_input():

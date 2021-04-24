@@ -23,11 +23,11 @@ func _on_mineProjectile_body_entered(body):
 	if body.is_in_group("Player"):
 		var explosion_instance = explosion.instance()
 		explosion_instance.position = self.position
-		get_parent().add_child(explosion_instance)
+		get_parent().call_deferred("add_child",explosion_instance)
 		queue_free()
 		return
 	
 	var mine_instance= mine.instance()
 	mine_instance.position = self.position
-	get_parent().add_child(mine_instance)
+	get_parent().call_deferred("add_child",mine_instance)
 	queue_free()

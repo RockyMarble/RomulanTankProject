@@ -22,8 +22,10 @@ func _on_bullet_body_entered(body):
 	
 	if body.is_in_group("Player"):
 		body.take_damage(bullet_damage)
+	call_deferred("explode")
+	queue_free()
 	
+func explode():
 	var explosion_instance = explosion.instance()
 	explosion_instance.position = self.position
 	get_parent().add_child(explosion_instance)
-	queue_free()

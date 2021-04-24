@@ -8,7 +8,7 @@ func _ready():
 	arming_timer.start()
 	$SoundMineArm.play()
 
-func _process(delta):
+func _process(_delta):
 	if !sleeping and arming_timer.is_stopped():
 		explode()
 

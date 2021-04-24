@@ -39,7 +39,7 @@ func init_items():
 	for item in $Level/Items.get_children():
 		if rng.randi_range(0,1) == 0:
 			item.visible = false
-			item.monitoring = false
+			item.set_deferred("monitoring", false)
 
 # Check for end of levels
 # If end:

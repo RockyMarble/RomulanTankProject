@@ -22,7 +22,7 @@ func _ready():
 	player = player_list.get_child(current_player)
 	player.update_current_player(true)
 
-func _process(delta):
+func _process(_delta):
 	if not paused and $TimeBetweenPlayer.is_stopped():
 		get_button_input()
 	if player.dead:

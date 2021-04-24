@@ -13,7 +13,7 @@ func _ready():
 	timer.start(time_explode)
 
 #spawns an explosion hitbox
-func _process(delta):
+func _process(_delta):
 	if timer.is_stopped():
 		var explosion_instance = explosion.instance()
 		explosion_instance.position = self.position

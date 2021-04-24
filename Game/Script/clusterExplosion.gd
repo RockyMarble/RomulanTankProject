@@ -12,7 +12,7 @@ func _ready():
 	timer.start(explosion_life)
 
 #searches the overlapping bodies for players to do damage calculation
-func _process(delta):
+func _process(_delta):
 	if timer.is_stopped():
 		explode()
 		queue_free()
