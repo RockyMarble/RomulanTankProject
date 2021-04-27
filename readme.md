@@ -33,39 +33,38 @@ More to come!
 ## Technologies
 * Tech 1 - version 1.0 (c++ as base language), ,github, sourcetree, godot. 
 * Tech 2 - version 2.0 (no change to used technology)
-* Tech 3 - version 3.0
+* Tech 3 - version 3.0 (no change to used technology)
 
 ## Setup
-* Download executable for Mac or Windows [here](https://drive.google.com/drive/folders/1LyZBEC2Yr0cSZWqs52-E5R4sDup3EQeV?usp=sharing)
-* If on mac, open Zip file, then run the executable. *(If given an error that the game cannot be run, cancel the notification, then go to system preferences > Security and Privacy. you will be prompted with a statement that it cannot be run because it isnt from an identified devloper. Click Open Anyway), then enjoy!
-* If windows, double click the .exe file, then enjoy!
+* click [here]() to play, or go to 
 
-## Code Examples
-More to come! Stay tuned!
+
 
 ## Features
 * Movement of tanks
-* Firing of multiple types of projetiles, Bullets, Bombs, and Sharks with frickin lasers! (Minus the Sharks)
+* Firing of multiple types of projetiles including, but not limited to, Bullets, Bombs, and Sharks with frickin lasers! (Minus the Sharks)
 * Local multiplayer capabilities
 * Ability to pause and exit
 * Fuel has been implemented! Make sure to carpool!
 
 More is on its way! Stay tuned!
 
-To-do list:
-* 
-* 
-* 
 
 ## Status
 Project is: _in progress
 Sprint 1: Completed
 Sprint 2: Completed
-Sprint 3: TODO
+Sprint 3: Completed
+Post sprint 3: more on its way! stay tuned!
 
 ## Review
 
 ### Alexander Wilems
+Sprint 3
+
+* Accomplishment: Creation of animated health and fuel bars utilizing the same script template, allowing for reuse of code without copy, and giving the user a visual representation of what their health/fuel level is without trying to see a number that may be hard for those with accessability needs to read without extra support. 
+Link to git repository [here]()
+
 sprint 2
 
 Creation of most animations, modifications of tanks to be symmetrical. Development of rudimentary points system, upscaling of map resolutions.
@@ -79,6 +78,11 @@ Creating art and main menu for game. Backgrounds have been created, but not impl
 * Accomplishment: Creation of fully functioning Title Screen. creates a starting page for game, ability to exit if programm was opened accidentally, and allows start of game. Link to git repository for Main Menu [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/scenes/TitleScreen.tscn).
 
 ### Nat Arney 
+Sprint 3
+
+* Accomplishment:
+Link to git repository [here]()
+
 sprint 2
 
 Level cycling, endgame, fuel system, and tank interactions.
@@ -92,6 +96,11 @@ Creation of basic terrain hitboxes, health functions of tanks, and damage functi
 * Accomplishment: Creation of health and damage mechanics for the tanks and projectiles. Creation of these allows for there to be an accomplishable goal in the game of dispatching your oppenent with the use of projectiles, and allows the game to have somewhat of an ending. Repository link to code can be found [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/TankRigid.gd). *(Please note, while health can run out in game, and player is dusted once dead, there is not yet an end of game mechanic for when only 1 player is left standing, to be added in next sprint.)*
 
 ### Benjamin Marble 
+Sprint 3
+
+* Accomplishment:
+Link to git repository [here]()
+
 sprint 2
 
 Sounds for new weapons, weapon projectile/sub-projectile explosions, tank movement, and turret movement have been created and implemented into the game.
@@ -105,6 +114,11 @@ Curation and implementation of music and sound effects. Menu and level music, as
 * Accomplishment: Implementation of the sound effects for the tank weapon and for when a player takes damage. When a projectile is fired, the sound effect for the tank turret immediatly plays. The explosive sound is supposed to give the player a sense of power when firing the tank turret, boosting immersion and enjoyment of the game. Repository link to main gun firing sound effect [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/PlayerController.gd). *(Please note this file has been worked on by multiple members for implementation of items only in the scope of support for that member.)*
 
 ### Adrian Lamphier
+Sprint 3
+
+* Accomplishment:
+Link to git repository [here]()
+
 sprint 2
 
 Added a [function](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/TankRigid.gd) to keep track of which weapon is being used.
@@ -121,6 +135,10 @@ Creating action groups such as shooting and movement for vehicles in-game. Also 
 *(Please note, not all gameplay mechanics in picture are implemented as of completion of first sprint.)*
 
 ## Moving Forward
+Due to the end of the semester, there no school sanctioned goal on moving forward. we as a group do hope to continue this project as a group if possible, or work on another project together for use of proffesional development. 
+
+We hope for more to come, so stay tuned!
+
 ### Alexander Wilems
 sprint 2
 
