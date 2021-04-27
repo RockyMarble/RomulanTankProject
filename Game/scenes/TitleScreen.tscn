@@ -121,14 +121,14 @@ script = ExtResource( 5 )
 stream = ExtResource( 9 )
 volume_db = -9.0
 
-[node name="Label" type="Label" parent="."]
+[node name="Version number" type="Label" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 23.2415
 margin_top = -22.343
 margin_right = 135.242
 margin_bottom = -8.34302
-text = "Version 2.0 Beta"
+text = "Update 2.1.1"
 align = 1
 valign = 2
 __meta__ = {
