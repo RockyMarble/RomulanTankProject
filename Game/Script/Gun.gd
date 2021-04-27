@@ -6,14 +6,15 @@ export var bullet_gravity = 750
 var laser_damage = 12
 var flame_damage = 30
 
-onready var laser_raycast := $LaserRaycast
-onready var laser_sprite := $laser
-onready var laser_timer := $LaserTimer
+onready var laser_raycast  := $LaserRaycast
+onready var laser_sprite   := $laser
+onready var laser_timer    := $LaserTimer
 onready var laser_particle := $LaserParticle
 onready var smoke_particle := $SmokeParticle
-onready var flame_area := $FlameArea
+onready var flame_area     := $FlameArea
 onready var flame_particle := $FlameParticle
-onready var laser_dust := $LaserDust
+onready var laser_dust     := $LaserDust
+
 
 
 func _process(_delta):

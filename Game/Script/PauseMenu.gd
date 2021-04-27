@@ -6,7 +6,7 @@ var scene_reset
 #onready var timer := $Timer
 
 func _ready():
-	controller = get_parent()
+	controller  = get_parent()
 	scene_reset = controller.get_owner().get_filename()
 
 func _process(_delta):

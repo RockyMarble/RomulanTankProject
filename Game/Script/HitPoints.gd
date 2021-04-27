@@ -1,8 +1,8 @@
 extends Panel
 
-var used = false
+var used         = false
 var segment_size = 0
-var base_size = 0
+var base_size    = 0
 
 #used as template for both fuel and hp size updates. 
 ################################################################################

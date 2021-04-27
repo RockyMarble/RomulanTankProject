@@ -1,10 +1,10 @@
 extends Area2D
 
-var velocity = Vector2(0, 0)
+var velocity       = Vector2(0, 0)
 var bullet_gravity = 250
-var rng = RandomNumberGenerator.new()
+var rng            = RandomNumberGenerator.new()
 
-var bomb = preload("res://scenes/clusterBomb.tscn")
+var bomb           = preload("res://scenes/clusterBomb.tscn")
 
 func _ready():
 	rng.randomize()

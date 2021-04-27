@@ -1,23 +1,23 @@
 extends RigidBody2D
 
 var normal_speed_max = 100
-var slow_speed_max = 50
-var left_vector = Vector2(-30, 0)
-var right_vector = Vector2(30, 0)
-var hp = 100
-var hp_max = 100
-var fuel = 300
-var fuel_max = 300
-var current_weapon = 0
+var slow_speed_max   = 50
+var left_vector      = Vector2(-30, 0)
+var right_vector     = Vector2(30, 0)
+var hp               = 100
+var hp_max           = 100
+var fuel             = 300
+var fuel_max         = 300
+var current_weapon   = 0
 
 var flipping = false
-var dead = false
+var dead     = false
 var touching = false
 
-var rng = RandomNumberGenerator.new()
+var rng        = RandomNumberGenerator.new()
 var tank_color = "Green"
-var powerup = 0
-var rounds = 0
+var powerup    = 0
+var rounds     = 0
 
 signal death
 

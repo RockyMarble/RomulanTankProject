@@ -6,8 +6,8 @@ onready var weapon_list := $OptionButton
 
 var player
 var current_player = 0
-var amt_dead = 0
-var paused = false
+var amt_dead       = 0
+var paused         = false
 
 #Searches the World for PlayerList and sets it to a variable
 #Adds the first child as the current player (WATCH OUT FOR BUGS WITH THIS)

@@ -1,10 +1,10 @@
 extends Area2D
 
-var velocity = Vector2(0, 0)
+var velocity       = Vector2(0, 0)
 var bullet_gravity = 250
-var bullet_damage = 10
+var bullet_damage  = 10
 
-var explosion = preload("res://scenes/explosion.tscn")
+var explosion      = preload("res://scenes/explosion.tscn")
 
 #Sets the velocity of the projectile with adding gravity
 #changes the angle that the projectile is traveling to

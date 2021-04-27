@@ -1,14 +1,14 @@
 extends KinematicBody2D
 
-const FLOOR_NORMAL = Vector2.UP
-const SNAP_DIRECTION = Vector2.DOWN
-const SNAP_LENGTH = 32.0
+const FLOOR_NORMAL    = Vector2.UP
+const SNAP_DIRECTION  = Vector2.DOWN
+const SNAP_LENGTH     = 32.0
 const FLOOR_MAX_ANGLE = deg2rad(46)
 
-export (int) var speed = 82
+export (int) var speed   = 82
 export (int) var gravity = 200
-var velocity = Vector2.ZERO
-var snap_vector = SNAP_DIRECTION * SNAP_LENGTH
+var velocity             = Vector2.ZERO
+var snap_vector          = SNAP_DIRECTION * SNAP_LENGTH
 
 func get_input():
 	velocity.x = 0

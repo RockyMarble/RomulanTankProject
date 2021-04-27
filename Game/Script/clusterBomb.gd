@@ -2,7 +2,7 @@ extends RigidBody2D
 
 onready var timer := $Timer
 
-var rng = RandomNumberGenerator.new()
+var rng       = RandomNumberGenerator.new()
 var time_explode
 var explosion = preload("res://scenes/clusterExplosion.tscn")
 

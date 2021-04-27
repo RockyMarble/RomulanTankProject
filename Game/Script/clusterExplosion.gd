@@ -1,7 +1,7 @@
 extends Area2D
 
 var explosion_damage = 7
-var explosion_life = .5
+var explosion_life   = .5
 
 onready var timer := $Timer
 
