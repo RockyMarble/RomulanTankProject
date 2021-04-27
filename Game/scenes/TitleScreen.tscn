@@ -122,13 +122,14 @@ stream = ExtResource( 9 )
 volume_db = -9.0
 
 [node name="Label" type="Label" parent="."]
-anchor_top = 1.0
-anchor_bottom = 1.0
+anchor_top = 1.0017
+anchor_right = 0.0517573
+anchor_bottom = 1.0017
 margin_left = 23.2415
 margin_top = -22.343
 margin_right = 135.242
 margin_bottom = -8.34302
-text = "Version 2.0 Beta"
+text = "Public Release Version 3.0"
 align = 1
 valign = 2
 __meta__ = {
