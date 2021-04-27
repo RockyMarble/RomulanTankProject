@@ -22,10 +22,10 @@ func run_resize(current_val, base_val):
 	# then runs size adjustment 
 func calc_segment_size(base_val): # calcs segment size with base size and max hp,
 								#giving size value for 1 unit of variable given.
-	base_size = rect_size.x
+	base_size    = rect_size.x
 	segment_size = base_size / base_val #gives size of what 1 hp point is worth
 	
 func calc_shrinkage(val): #gives new size based on current size 
 	var new_size = segment_size * val
-	rect_size.x = (new_size)
+	rect_size.x  = (new_size)
 

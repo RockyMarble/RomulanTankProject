@@ -98,7 +98,7 @@ func change_level():
 
 func restart():
 	var current_level = load("res://scenes/Levels/Level-" + str(lvl_num -1) + ".tscn").instance()
-	var tank_colors = [get_node("Level/Camera2D/PlayerList/Player1").tank_color,get_node("Level/Camera2D/PlayerList/Player2").tank_color]
+	var tank_colors   = [get_node("Level/Camera2D/PlayerList/Player1").tank_color,get_node("Level/Camera2D/PlayerList/Player2").tank_color]
 	get_node("Level").set_name("old")
 	get_node("old").queue_free()
 	add_child(current_level)

@@ -13,16 +13,17 @@ func _ready():
 #changes the angle that the projectile is traveling to
 func _process(delta):
 	velocity.y += bullet_gravity * delta
-	position += velocity * delta
-	rotation = velocity.angle()
+	position   += velocity * delta
+	rotation    = velocity.angle()
 
 
 #on hitting an object, it spawns bombs that are applied a random force between an interval
 func _on_Node2D_body_entered(_body):
-	velocity.x = 0
-	velocity.y = 0
+	velocity.x     = 0
+	velocity.y     = 0
 	bullet_gravity = 0
 	$SoundClusterPop.play()
+	
 	var counter = 5
 	while (counter > 0):
 		spawn_bomb()
@@ -32,9 +33,9 @@ func _on_Node2D_body_entered(_body):
 
 func spawn_bomb():
 	var angle = Vector2()
-	angle.x = rng.randf_range(-150, 150)
-	angle.y = rng.randf_range(-300, -200)
-	var bomb_instance = bomb.instance()
+	angle.x   = rng.randf_range(-150, 150)
+	angle.y   = rng.randf_range(-300, -200)
+	var bomb_instance      = bomb.instance()
 	bomb_instance.position = self.position
 	get_parent().call_deferred("add_child",bomb_instance)
 	bomb_instance.call_deferred("apply_central_impulse",angle)

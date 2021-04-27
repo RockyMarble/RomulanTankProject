@@ -1,9 +1,28 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Script/Gun.gd" type="Script" id=1]
 [ext_resource path="res://images/Tanks/TankBarrelGreen.png" type="Texture" id=2]
 [ext_resource path="res://images/TempImage/red.png" type="Texture" id=3]
 [ext_resource path="res://images/Projectile/White.PNG" type="Texture" id=4]
+
+[sub_resource type="GDScript" id=22]
+script/source = "extends RayCast2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.988889 )
@@ -140,6 +159,7 @@ enabled = true
 cast_to = Vector2( 1500, 0 )
 collision_mask = 2
 collide_with_areas = true
+script = SubResource( 22 )
 
 [node name="GunBarrel" type="Node2D" parent="."]
 position = Vector2( 100.092, 0.588493 )
@@ -208,3 +228,6 @@ emitting = false
 amount = 45
 one_shot = true
 process_material = SubResource( 21 )
+
+[node name="ArcTimer" type="Timer" parent="."]
+wait_time = 4.5

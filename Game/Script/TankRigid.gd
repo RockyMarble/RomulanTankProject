@@ -102,7 +102,7 @@ func powerup_check():
 	return false
 					
 func update_current_player(var value):
-	$CurrentPlayer.visible = value
+	$CurrentPlayer.visible   = value
 	$Gun/ArcParticle.visible = value
 
 func get_current_weapon():
@@ -143,7 +143,7 @@ func take_damage(amount):
 		$SoundPlayerDedz.play()
 
 func die():
-	dead = true
+	dead    = true
 	# Animations, score changes go here.
 	visible = false # Currently does not stop or restart the game
 	collision_mask = 0b0 # Stops bullets from hitting
@@ -161,5 +161,5 @@ func _on_RigidBody2D_body_shape_exited(_body_id, body, _body_shape, _local_shape
 
 func change_tank_color(color):
 	get_node("Gun/gun").texture = load("res://images/Tanks/TankBarrel" + str(color) + ".png")
-	get_node("tank").texture = load("res://images/Tanks/symTank" + str(color) + ".png")
+	get_node("tank").texture    = load("res://images/Tanks/symTank" + str(color) + ".png")
 	tank_color = color

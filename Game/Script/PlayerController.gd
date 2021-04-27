@@ -70,7 +70,7 @@ func get_button_input():
 
 
 func pause():
-	paused = true
+	paused   = true
 	var menu = load("res://scenes/PauseMenu.tscn").instance()
 	add_child(menu)
 
