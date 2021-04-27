@@ -1,10 +1,10 @@
 # Tanks: a Romulans Production 
 > Team comprised of Alexander Wilems, Nat Arney, Benjamin Marble, Adrian Lamphier
 
-> This program is meant to be a singleplayer 2D strategy and turn based tank arcade game. We hope to add a multiplayer mode after the 1st sprint.
+> This program is meant to be a local multiplayer 2D strategy and turn based tank arcade game. 
 Our audience is ourselves and anyone else who may find this game fun.
  
-> We want to make this game to get a better feel for the design side of programming, and learning 2D game creation seems like something fun to learn for the group. We really have no goal for impact or change, just some fun. 
+> We want to make this game to get a better feel for the design side of programming, and learning 2D game creation seems like something fun to learn for the group. we chose to do this over working on something more pragmatic, as the goal of this class is not to create something that will change the world, but learn tools such as Jira, bitbucket, and learning how to communicate as a team. we also felt that the creation of just a code based program would not give us the challange of communication in a way that a multimedia program such as a game would. 
 
 ## Table of contents
 * [General info](#general-info)
@@ -28,7 +28,7 @@ More to come!
 ![inGameShot1](ReadMePhotos/GamePlayShot1.jpg)
 ![inGameShot2](ReadMePhotos/GamePlayShot2.jpg)
 ![inGameShot3](ReadMePhotos/inGameShot3.jpg)
-![inGameShot3](ReadMePhotos/Sprint2.gif)
+![inGameShot3](ReadMePhotos/Sprint3.gif)
 
 ## Technologies
 * Tech 1 - version 1.0 (c++ as base language), ,github, sourcetree, godot. 
@@ -38,8 +38,6 @@ More to come!
 ## Setup
 * click [here]() to play, or go to 
 
-
-
 ## Features
 * Movement of tanks
 * Firing of multiple types of projetiles including, but not limited to, Bullets, Bombs, and Sharks with frickin lasers! (Minus the Sharks)
@@ -48,7 +46,6 @@ More to come!
 * Fuel has been implemented! Make sure to carpool!
 
 More is on its way! Stay tuned!
-
 
 ## Status
 Project is: _in progress
@@ -62,8 +59,10 @@ Post sprint 3: more on its way! stay tuned!
 ### Alexander Wilems
 Sprint 3
 
+Creation of Particle effects for lasers, assets for new weapons, bullet line basic set up and implementation. Focus on quality of life animations. Change of version number to indicate end of semester based development. 
+
 * Accomplishment: Creation of animated health and fuel bars utilizing the same script template, allowing for reuse of code without copy, and giving the user a visual representation of what their health/fuel level is without trying to see a number that may be hard for those with accessability needs to read without extra support. 
-Link to git repository [here]()
+Link to git repository [here](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/HitPoints.gd)
 
 sprint 2
 
@@ -140,6 +139,11 @@ Due to the end of the semester, there no school sanctioned goal on moving forwar
 We hope for more to come, so stay tuned!
 
 ### Alexander Wilems
+post sprint 3 
+
+* edit bullet line to allow for better fit with weapon chosen (specifically the laser as this does not get effected by gravity)
+* completion and implementation of solar beam.
+
 sprint 2
 
 * Renovation of bullet art.
