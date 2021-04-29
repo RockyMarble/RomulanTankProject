@@ -36,7 +36,7 @@ More to come!
 * Tech 3 - version 3.0 (no change to used technology)
 
 ## Setup
-* click [here]() to play, or go to 
+* click [here](https://romulanstp.itch.io/tanks) to play and/or download for free!
 
 ## Features
 * Movement of tanks
