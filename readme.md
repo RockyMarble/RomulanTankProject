@@ -116,7 +116,8 @@ Creation and implementation of music and sound effects. Menu and level music, as
 Sprint 3
 
 * Accomplishment:
-Link to git repository [here]()
+Created two music tracks, used in the [credits](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/audio/TankMusicCredits.ogg) and [title screen](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/audio/TankMusicTitleScreen.ogg).
+Added two more [weapon types.](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/Gun.gd)
 
 sprint 2
 
@@ -203,6 +204,12 @@ sprint 1
 * Creation of a "kill-floor", an off-screen floor that sets a player's health to zero for when they fall off the map.
 
 ### Adrian Lamphier
+Post sprint 3
+
+* Create more music.
+* Create more weapon types.
+* Assign projectiles unique shot trajectories.
+
 sprint 2
 
 * Possibly add background music.
