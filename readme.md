@@ -99,7 +99,7 @@ Sprint 3
 
 Implementation of a music changer that advances the level music to the next track when switching to the next level. Creation of a credits screen. Creation of sound effects for additional weapons and menu buttons, as well as additional music tracks. Cleaned some clutter in the repository.
 
-* Accomplishment: Implementation of the credits screen. Created a new "credits" scene and linked it to a new "credits" button that is now found on the title screen. Utilized borrowed code to soup-it-up and give it features such as holding the down arrow key to fast-forward and hitting escape to return to the title screen. Heavy edits were made to help with spacing and music synchronization, the music track finishes as the credits naturally scroll to the end. Created music for credits was re-assigned as a level track due to a shorter run time, resulting in all Rocky level music (pun intended) and Adrian's groovy tracks being featured in the credits and title screens. Links to [CreditsScript](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/Credits.gd), [CreditsButton](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/CreditsButton.gd), and [CreditsScene.](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/scenes/Credits.tscn)
+* Accomplishment: Implementation of the credits screen. Created a new "credits" scene and linked it to a new "credits" button that is now found on the title screen. Utilized borrowed code(credited below) to soup-it-up and give it features such as holding the down arrow key to fast-forward and hitting escape to return to the title screen. Heavy edits were made to help with spacing and music synchronization, the music track finishes as the credits naturally scroll to the end. Created music for credits was re-assigned as a level track due to a shorter run time, resulting in all Rocky level music (pun intended) and Adrian's groovy tracks being featured in the credits and title screens. Links to [CreditsScript](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/Credits.gd), [CreditsButton](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/Script/CreditsButton.gd), and [CreditsScene.](https://bitbucket.org/cs3398s21romulans/romulans-tank-game-repository/src/master/Game/scenes/Credits.tscn)
 
 sprint 2
 
@@ -234,4 +234,6 @@ We are still working! Stay tuned!
 [Game engine](https://godotengine.org)
 
 [Sound effects](https://www.zapsplat.com)
+
+[Functions in credits](https://github.com/benbishopnz/godot-credits)
 
