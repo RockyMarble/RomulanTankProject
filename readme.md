@@ -4,7 +4,7 @@
 > This program is meant to be a local multiplayer 2D strategy and turn based tank arcade game. 
 Our audience is ourselves and anyone else who may find this game fun.
  
-> We want to make this game to get a better feel for the design side of programming, and learning 2D game creation seems like something fun to learn for the group. we chose to do this over working on something more pragmatic, as the goal of this class is not to create something that will change the world, but learn tools such as Jira, Bitbucket, and learning how to communicate as a team. we also felt that the creation of just a code based program would not give us the challenge of communication in a way that a multimedia program such as a game would. 
+> We made this game to get a better feel for the design side of programming, learning 2D game creation seems like something fun to learn for the group. We chose to do this over working on something more pragmatic, as the goal of this class is not to create something that will change the world, but learn tools such as Jira, Bitbucket, and learn how to communicate as a team while working remotely. We feel that the creation of just a code based program would not give us the challenge of communication in a way that a multimedia program such as a game would. 
 
 ## Table of contents
 * [General info](#general-info)
@@ -36,7 +36,7 @@ More to come!
 * Tech 3 - version 3.0 (no change to used technology)
 
 ## Setup
-* click [here](https://romulanstp.itch.io/tanks) to play and/or download for free!
+* Click [here](https://romulanstp.itch.io/tanks) to play and/or download for free!
 
 ## Features
 * Movement of tanks
@@ -52,7 +52,7 @@ Project is: _in progress
 Sprint 1: Completed
 Sprint 2: Completed
 Sprint 3: Completed
-Post sprint 3: more on its way! stay tuned!
+Post sprint 3: More is on the way! stay tuned!
 
 ## Review
 
